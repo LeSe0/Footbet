@@ -7,6 +7,8 @@ import { routes } from "./routes";
 import { Route, Routes } from "react-router-dom";
 // style
 import "./style.css";
+// components
+import Header from "./components/ConstantComponents/Header";
 
 function App() {
 
@@ -14,6 +16,7 @@ function App() {
 
   return (
     <Box className="app">
+      <Header />
       <Routes>
         {routes.map((el, i) => {
           return (
