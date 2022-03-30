@@ -3,6 +3,7 @@ import React from "react";
 // images
 import Logo from "../../images/Header/logo.svg";
 import headerBackground from "../../images/Header/headerBackground.svg";
+import IpadHeaderIcon from "../../images/Header/IpadMenuIcon.svg"
 // MUI
 import { Typography, Grid, Box } from "@mui/material";
 import UserLogin from "./components/UserLogin";
@@ -29,16 +30,27 @@ export default function HeaderContent() {
           mt: "2.4890190336749636vw",
           ml: "6.734992679355783vw",
           display: "flex",
-          alignItems: "flex-start",
+          justifyContent: "flex-start",
           width: "min-content",
+          flexDirection : "column"
         }}
       >
         <img
           src={Logo}
           style={{
-            width: "10vw",
+            width: "12vw",
           }}
         />
+        <Box sx = {theme =>({
+          display : "flex",
+          justifyContent : "center",
+          mt : "13px",
+          [theme.breakpoints.up("md")] : {
+            display : "none"
+          }
+        })}>
+          <img src = {IpadHeaderIcon}/>
+        </Box>
       </Grid>
       <Grid
         container
@@ -54,6 +66,9 @@ export default function HeaderContent() {
       >
         <Grid item sx = {theme =>({
           mt: "4.838945827232796vw",
+          justifyContent : "center",
+          display : "flex",
+          width : "100%",
           [theme.breakpoints.down('md')] : {
             order : "1"
           }
@@ -65,6 +80,8 @@ export default function HeaderContent() {
         </Grid>
         <Grid item sx = {theme =>({
           order : "1",
+          justifyContent : "flex-end",
+          width : "100%",
           alignItems : "flex-start",
           [theme.breakpoints.down("md")] : {
             order : "0",          

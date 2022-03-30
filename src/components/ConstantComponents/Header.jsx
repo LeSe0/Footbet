@@ -1,8 +1,10 @@
 // React
 import React from "react";
 // MUI
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
+// components
 import HeaderContent from "../HeaderComponents/HeaderContent";
+import HeaderWebSites from "../HeaderComponents/HeaderWebSites";
 
 export default function Header() {
   return (
@@ -12,24 +14,13 @@ export default function Header() {
         display : "flex",
         flexWrap : "nowrap",
         overflowX : "hidden",
+        backgroundColor : "#12112c",
         [theme.breakpoints.down("md")] : {
           display : "flex",
         }
       })}
     >
-      <Grid
-        item
-        container
-        sx={theme =>({
-          width : "min-content",
-          color: "#fff",
-          [theme.breakpoints.down("md")] : {
-            display : "none"
-          }
-        })}
-      >
-        FeedBack
-      </Grid>
+      <HeaderWebSites />
       <HeaderContent />
     </Grid>
   );

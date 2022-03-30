@@ -82,7 +82,7 @@ export default function LanguageSelect() {
           name: "age",
           id: "uncontrolled-native",
         }}
-        renderValue={(val) => {
+        renderValue={(val, i) => {
           return (
             <Box
               sx={theme =>({
@@ -92,6 +92,7 @@ export default function LanguageSelect() {
                   fontSize : "16px"
                 }
               })}
+              key = {val + i}
             >
               <Box
                 sx={{
@@ -121,6 +122,7 @@ export default function LanguageSelect() {
                 display: "flex",
                 fontSize: "18px",
               }}
+              key = {el.langEng + i}
             >
               <Box
                 sx={{
