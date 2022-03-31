@@ -6,7 +6,7 @@ import headerBackground from "../../images/Header/headerBackground.svg";
 import IpadHeaderIcon from "../../images/Header/IpadMenuIcon.svg"
 // MUI
 import { Typography, Grid, Box } from "@mui/material";
-import UserLogin from "./components/UserLogin";
+import UserLogin from "./components/userLoginComponents/UserLogin";
 
 export default function HeaderContent() {
   return (
@@ -38,7 +38,7 @@ export default function HeaderContent() {
         <img
           src={Logo}
           style={{
-            width: "12vw",
+            width: "10vw",
           }}
         />
         <Box sx = {theme =>({

@@ -4,18 +4,19 @@ import React from "react";
 import { Grid } from "@mui/material";
 // components
 import HeaderContent from "../HeaderComponents/HeaderContent";
-import HeaderWebSites from "../HeaderComponents/HeaderWebSites";
+import HeaderWebSites from "../HeaderComponents/headerWebSitesComponents/HeaderWebSites";
 
 export default function Header() {
   return (
     <Grid
       container
-      sx={{
+      sx={theme =>({
         display : "flex",
         flexWrap : "nowrap",
         overflowX : "hidden",
         backgroundColor : "#12112c",
-      }}
+        height : "100%"
+      })}
     >
       <HeaderWebSites />
       <HeaderContent />

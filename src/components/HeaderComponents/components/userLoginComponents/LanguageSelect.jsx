@@ -1,7 +1,14 @@
 // React
 import React, { useState } from "react";
 // MUI
-import { Select, Grid, Box, MenuItem, FormControl } from "@mui/material";
+import {
+  Select,
+  Grid,
+  Box,
+  MenuItem,
+  FormControl,
+  Typography,
+} from "@mui/material";
 
 export default function LanguageSelect() {
   const data = [
@@ -89,29 +96,47 @@ export default function LanguageSelect() {
                 display: "flex",
                 fontSize: "1em",
                 [theme.breakpoints.down("lg")]: {
-                  fontSize: "0.8em",
+                  fontSize: "0.4em !important",
                 },
-                [theme.breakpoints.down("sm")]: {
-                  fontSize: "0.5em",
-                },
+                // [theme.breakpoints.down("md")]: {
+                //   fontSize: "0.4em !important",
+                // },
               })}
               key={val + i}
             >
               <Box
                 sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  fontSize: "18px",
                   mr: "2px",
+                  mb: "5px",
                 }}
               >
-                {data[val].lang}
+                <Typography
+                  sx={(theme) => ({
+                    fontSize: "16px",
+                    [theme.breakpoints.down("lg")]: {
+                      fontSize: "0.4em !important",
+                    },
+                    [theme.breakpoints.down("md")]: {
+                      fontSize: "0.4em !important",
+                    },
+                  })}
+                >
+                  {data[val].lang}
+                </Typography>
               </Box>
               <Box
                 sx={{
+                  display: "flex",
+                  mb : "5px",
                   "& img": {
                     borderRadius: "100%",
                   },
                 }}
               >
-                <img src={data[val].icon} />
+                <img src={data[val].icon} height = "20vh"/>
               </Box>
             </Box>
           );
@@ -124,11 +149,9 @@ export default function LanguageSelect() {
               sx={(theme) => ({
                 display: "flex",
                 fontSize: "1em",
+                justifyContent: "flex-start",
                 [theme.breakpoints.down("lg")]: {
-                  fontSize: "0.8em",
-                },
-                [theme.breakpoints.down("sm")]: {
-                  fontSize: "0.5em",
+                  fontSize: "0.7em",
                 },
               })}
               key={el.langEng + i}
@@ -141,13 +164,18 @@ export default function LanguageSelect() {
                 {el.langEng}
               </Box>
               <Box
-                sx={{
+                sx={(theme) => ({
+                  display: "flex",
+                  alignItems: "center",
                   "& img": {
                     borderRadius: "100%",
                   },
-                }}
+                  [theme.breakpoints.down("lg")]: {
+                    alignItems: "flex-start",
+                  },
+                })}
               >
-                <img src={el.icon} />
+                <img src={el.icon} width="15vw" />
               </Box>
             </MenuItem>
           );
