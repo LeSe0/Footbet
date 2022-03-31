@@ -46,7 +46,7 @@ export default function LanguageSelect() {
         color: "#fff",
         ml: "20.35px",
         mr: "7.320644216691069vw",
-        width : "min-content",
+        width: "min-content",
         "& .MuiSelect-select": {
           display: "flex !important",
           padding: "0 !important",
@@ -68,8 +68,8 @@ export default function LanguageSelect() {
             "& ul": {
               background: "#12112C !important",
               border: "1px solid #9e094a !important",
-              outline : "none !important",
-              color : "white"
+              outline: "none !important",
+              color: "white",
             },
           },
         }}
@@ -85,14 +85,17 @@ export default function LanguageSelect() {
         renderValue={(val, i) => {
           return (
             <Box
-              sx={theme =>({
+              sx={(theme) => ({
                 display: "flex",
-                fontSize: "18px",
-                [theme.breakpoints.down("md")] : {
-                  fontSize : "16px"
-                }
+                fontSize: "1em",
+                [theme.breakpoints.down("lg")]: {
+                  fontSize: "0.8em",
+                },
+                [theme.breakpoints.down("sm")]: {
+                  fontSize: "0.5em",
+                },
               })}
-              key = {val + i}
+              key={val + i}
             >
               <Box
                 sx={{
@@ -118,11 +121,17 @@ export default function LanguageSelect() {
           return (
             <MenuItem
               value={i}
-              sx={{
+              sx={(theme) => ({
                 display: "flex",
-                fontSize: "18px",
-              }}
-              key = {el.langEng + i}
+                fontSize: "1em",
+                [theme.breakpoints.down("lg")]: {
+                  fontSize: "0.8em",
+                },
+                [theme.breakpoints.down("sm")]: {
+                  fontSize: "0.5em",
+                },
+              })}
+              key={el.langEng + i}
             >
               <Box
                 sx={{

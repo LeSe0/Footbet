@@ -15,6 +15,7 @@ export default function UserLogin() {
         display: "flex",
         mt: "3.7994143484626646vw",
         justifyContent: "flex-end",
+        fontSize: "18px",
         [theme.breakpoints.down("md")]: {
           width: "100%",
         },
@@ -22,8 +23,9 @@ export default function UserLogin() {
     >
       <Box
         sx={{
-          display: "flex",
           height: "min-content",
+          display : "flex",
+          alignItems : "center",
         }}
       >
         <img src={registerIcon} />
@@ -33,9 +35,12 @@ export default function UserLogin() {
             color: "#fff",
             fontFamily: "Arimo",
             fontWeight: "400",
-            fontSize: "18px",
-            [theme.breakpoints.down("md")]: {
-              fontSize: "16px",
+            fontSize: "1em",
+            [theme.breakpoints.down("lg")]: {
+              fontSize: "0.8em",
+            },
+            [theme.breakpoints.down("sm")]: {
+              fontSize: "0.5em",
             },
           })}
         >
@@ -45,6 +50,7 @@ export default function UserLogin() {
       <Box
         sx={{
           display: "flex",
+          alignItems: "center",
           ml: "20px",
           height: "min-content",
           color: "#fff",
@@ -57,10 +63,13 @@ export default function UserLogin() {
             ml: "5px",
             fontFamily: "Arimo",
             fontWeight: "400",
-            fontSize: "18px",
+            fontSize: "1em",
             pr: "20px",
-            [theme.breakpoints.down("md")]: {
-              fontSize: "16px",
+            [theme.breakpoints.down("lg")]: {
+              fontSize: "0.8em",
+            },
+            [theme.breakpoints.down("sm")]: {
+              fontSize: "0.5em",
             },
           })}
         >
