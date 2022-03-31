@@ -10,15 +10,12 @@ export default function Header() {
   return (
     <Grid
       container
-      sx={theme =>({
+      sx={{
         display : "flex",
         flexWrap : "nowrap",
         overflowX : "hidden",
         backgroundColor : "#12112c",
-        [theme.breakpoints.down("md")] : {
-          display : "flex",
-        }
-      })}
+      }}
     >
       <HeaderWebSites />
       <HeaderContent />
