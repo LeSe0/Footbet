@@ -10,7 +10,7 @@ export default function WebSitePopover({el , open , anchorEl, closePopover}){
     onClose={closePopover}
     anchorEl={anchorEl}
     placement={"right"}
-    transition
+    transition={"true"}
     sx = {{
       background : "rgba(0,0,0,0.1)",
       "& .css-3bmhjh-MuiPaper-root-MuiPopover-paper" : {
