@@ -1,10 +1,16 @@
 // React
-import React from 'react'
+import React from "react";
 // MUI
-import { Box } from '@mui/material'
+import { Box } from "@mui/material";
+// components
+import Menu from "../components/Menu/Menu";
 
-export default function Main(){
+export default function Main() {
   return (
-    <Box>Main</Box>
-  )
+    <Box sx = {{
+      background : "#12112c"
+    }}>
+      <Menu />
+    </Box>
+  );
 }
