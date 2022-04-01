@@ -24,7 +24,7 @@ export default function ElemsRows({
       {menuData.map((el, i) => {
         return (
           <Box key={el.title + i} onClick = {() =>{
-            setOpenModal(true)
+            el.path == "contacts" && setOpenModal(true)
           }}>
             <Button
               el={el}
