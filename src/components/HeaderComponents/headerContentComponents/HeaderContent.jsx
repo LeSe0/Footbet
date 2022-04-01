@@ -8,7 +8,7 @@ import { Grid } from "@mui/material";
 import HeaderIconPart from "./components/HeaderIconPart";
 import FootballerPart from "./components/FootballerPart";
 
-export default function HeaderContent() {
+export default function HeaderContent({webSitesData}) {
   return (
     <Grid
       item
@@ -24,7 +24,7 @@ export default function HeaderContent() {
         flexWrap: "nowrap",
       }}
     >
-      <HeaderIconPart />
+      <HeaderIconPart webSitesData = {webSitesData}/>
       <FootballerPart />
     </Grid>
   );

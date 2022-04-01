@@ -1,12 +1,22 @@
 // React
-import React from "react";
+import React, { useState } from "react";
 // images
 import Logo from "../../../../images/Header/logo.svg";
-import IpadHeaderIcon from "../../../../images/Header/IpadMenuIcon.svg"
+import IpadHeaderIcon from "../../../../images/Header/IpadMenuIcon.svg";
 // MUI
 import { Box, Grid } from "@mui/material";
+// components
+import HeaderIconPartMobileMenu from "./HeaderIconPartComponents/HeaderIconPartMobileMenu";
 
-export default function HeaderIconPart() {
+export default function HeaderIconPart({ webSitesData }) {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [open, setOpen] = useState(false);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+    setOpen(!open);
+  };
+
   return (
     <Grid
       item
@@ -28,14 +38,23 @@ export default function HeaderIconPart() {
       <Box
         sx={(theme) => ({
           display: "flex",
-          justifyContent: "center",
-          mt: "13px",
+          alignItems: "center",
+          flexDirection: "column",
+          mt: "5px",
           [theme.breakpoints.up("md")]: {
             display: "none",
           },
         })}
       >
-        <img src={IpadHeaderIcon} />
+        <Box onClick={handleClick}>
+          <img src={IpadHeaderIcon} width = "13vw"/>
+        </Box>
+        <HeaderIconPartMobileMenu
+          anchorEl={anchorEl}
+          open={open}
+          setOpen={setOpen}
+          webSitesData={webSitesData}
+        />
       </Box>
     </Grid>
   );

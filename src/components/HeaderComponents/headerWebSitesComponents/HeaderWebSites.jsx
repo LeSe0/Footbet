@@ -1,70 +1,27 @@
 // React
 import React, { useState } from "react";
-// images
-import Telephone from "../../../images/Header/Websites/phoneCall.svg";
-import Facebook from "../../../images/Header/Websites/facebook.svg";
-import Instagram from "../../../images/Header/Websites/Instagram.svg";
-import Telegram from "../../../images/Header/Websites/telegram.svg";
-import Viber from "../../../images/Header/Websites/Viber.svg";
-import WhatsUp from "../../../images/Header/Websites/WhatsUp.svg";
 // MUI
-import { Grid, Box, Popover, Fade, Paper, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import WebSitePopover from "./WebSitePopover";
 
-const websites = [
-  {
-    icon: Telephone,
-    content: "+34 672 314 808",
-  },
-  {
-    icon: Facebook,
-    content: "+34 672 314 808",
-  },
-  {
-    icon: Telegram,
-    content: "+34 672 314 808",
-  },
-  {
-    icon: WhatsUp,
-    content: "+34 672 314 808",
-  },
-  {
-    icon: Instagram,
-    content: "+34 672 314 808",
-  },
-  {
-    icon: Viber,
-    content: "+34 672 314 808",
-  },
-];
-
-export default function HeaderWebSites() {
+export default function HeaderWebSites({webSitesData}) {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [open, setOpen] = useState(false);
   const [activeId, setActiveId] = useState();
 
   const handleClick = (id) => (event) => {
     setAnchorEl(event.currentTarget);
-    setOpen(() => (id == activeId ? !open : true));
     setActiveId(id);
   };
 
   return (
-    <Grid
-      item
-      container
-      sx={(theme) => ({
+    <Stack
+      sx={{
         width: "min-content",
         color: "#fff",
-        height: "auto",
-        display: "flex",
+        height: "100%",
         justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        [theme.breakpoints.down("md")]: {
-          display: "none",
-        },
-      })}
+        alignItems: "center"
+      }}
     >
       <Box
         sx={{
@@ -74,7 +31,7 @@ export default function HeaderWebSites() {
           flexDirection: "column",
         }}
       >
-        {websites.map((el, i) => {
+        {webSitesData.map((el, i) => {
           return (
             <Box key={el.content + i}>
               <Box
@@ -93,13 +50,13 @@ export default function HeaderWebSites() {
               <WebSitePopover
                 el={el}
                 anchorEl={anchorEl}
-                open={open}
-                closePopover={() => setOpen(false)}
+                open={activeId == i}
+                closePopover={() => setActiveId()}
               />
             </Box>
           );
         })}
       </Box>
-    </Grid>
+    </Stack>
   );
 }
