@@ -39,7 +39,9 @@ export default function WebSitesForMobile({ open, onClose }) {
             backgroundColor: "#d10a52",
           }}
         >
-          <CloseIcon onClick = {onClose}/>
+          <CloseIcon onClick = {onClose} sx = {{
+            cursor : "pointer"
+          }}/>
         </Box>
           <ModalWebSiteItems />
       </Stack>

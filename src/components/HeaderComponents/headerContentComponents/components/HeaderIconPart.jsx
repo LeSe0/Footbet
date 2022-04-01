@@ -46,8 +46,10 @@ export default function HeaderIconPart() {
           },
         })}
       >
-        <Box onClick={handleClick}>
-          <img src={IpadHeaderIcon} width = "13vw"/>
+        <Box onClick={handleClick} sx = {{
+          cursor : "pointer"
+        }}>
+          <img src={IpadHeaderIcon} width = "15vw"/>
         </Box>
         <HeaderIconPartMobileMenu
           anchorEl={anchorEl}
