@@ -9,12 +9,16 @@ export default function ModalWebSiteItems() {
     <Box>
       {ourWebSites.map((el, i) => {
         return (
-          <Grid container sx = {{
-            width: '100%',
-            minHeight: '40px',
-            display : "grid",
-            gridTemplateColumns: '1fr 5fr',
-          }}>
+          <Grid
+            key={el.content + i}
+            container
+            sx={{
+              width: "100%",
+              minHeight: "40px",
+              display: "grid",
+              gridTemplateColumns: "1fr 5fr",
+            }}
+          >
             <Grid
               item
               sx={{
@@ -31,9 +35,9 @@ export default function ModalWebSiteItems() {
             <Grid
               item
               sx={{
-                  display : 'flex',
-                  alignItems : "center",
-                  justifyContent : "center",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 "& a": {
                   textDecoration: "none",
                   color: "#fff",
