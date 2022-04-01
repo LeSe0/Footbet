@@ -1,10 +1,11 @@
 // React
 import React, { useState } from "react";
+import { ourWebSites } from "../../../routes";
 // MUI
 import { Box, Stack } from "@mui/material";
 import WebSitePopover from "./WebSitePopover";
 
-export default function HeaderWebSites({webSitesData}) {
+export default function HeaderWebSites() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [activeId, setActiveId] = useState();
 
@@ -31,7 +32,7 @@ export default function HeaderWebSites({webSitesData}) {
           flexDirection: "column",
         }}
       >
-        {webSitesData.map((el, i) => {
+        {ourWebSites.map((el, i) => {
           return (
             <Box key={el.content + i}>
               <Box

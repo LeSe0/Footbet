@@ -2,42 +2,14 @@
 import React, { useState } from "react";
 // MUI
 import { Menu, MenuItem, Hidden } from "@mui/material";
+import { menuData } from "../../../../../routes";
 // components
 import WebSitesForMobile from "../../../headerWebSitesComponents/mobile/WebSitesForMobile";
-
-const data = [
-  {
-    title: "Главная",
-  },
-  {
-    title: "Игры",
-  },
-  {
-    title: "Прогнозы/олата",
-  },
-  {
-    title: "Статистика матчей",
-  },
-  {
-    title: "Отзывы",
-  },
-  {
-    title: "О нас",
-  },
-  {
-    title: "Оплата",
-  },
-  {
-    title: "Контакты",
-    modal: true,
-  },
-];
 
 export default function HeaderIconPartMobileMenu({
   anchorEl,
   open,
   setOpen,
-  webSitesData,
 }) {
   const [openModal, setOpenModal] = useState(false);
 
@@ -75,7 +47,7 @@ export default function HeaderIconPartMobileMenu({
             },
         })}
       >
-        {data.map((el, i) => {
+        {menuData.map((el, i) => {
           return (
             <MenuItem
               dense={true}
@@ -83,8 +55,8 @@ export default function HeaderIconPartMobileMenu({
               sx={{
                 borderBottom: "1px solid rgba(126,26,74,.19)",
               }}
-              onClick={(e) => {
-                el.modal && setOpenModal(true);
+              onClick={() => {
+                el.path == "contacts" && setOpenModal(true);
               }}
             >
               {el.title}
@@ -97,7 +69,6 @@ export default function HeaderIconPartMobileMenu({
         onClose={() => {
           setOpenModal(false);
         }}
-        webSitesData={webSitesData}
       />
     </Hidden>
   );

@@ -13,7 +13,7 @@ const styles = {
   },
 };
 
-export default function WebSitesForMobile({ open, onClose, webSitesData }) {
+export default function WebSitesForMobile({ open, onClose }) {
   return (
     <Modal
       open={open}
@@ -41,7 +41,7 @@ export default function WebSitesForMobile({ open, onClose, webSitesData }) {
         >
           <CloseIcon onClick = {onClose}/>
         </Box>
-          <ModalWebSiteItems webSitesData = {webSitesData}/>
+          <ModalWebSiteItems />
       </Stack>
     </Modal>
   );

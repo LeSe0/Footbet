@@ -1,12 +1,13 @@
 // React
 import React from "react";
+import { ourWebSites } from "../../../../../routes";
 // MUI
 import { Grid, Box } from "@mui/material";
 
-export default function ModalWebSiteItems({ webSitesData }) {
+export default function ModalWebSiteItems() {
   return (
     <Box>
-      {webSitesData.map((el, i) => {
+      {ourWebSites.map((el, i) => {
         return (
           <Grid container sx = {{
             width: '100%',

@@ -8,7 +8,7 @@ import { Box, Grid } from "@mui/material";
 // components
 import HeaderIconPartMobileMenu from "./HeaderIconPartComponents/HeaderIconPartMobileMenu";
 
-export default function HeaderIconPart({ webSitesData }) {
+export default function HeaderIconPart() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(false);
 
@@ -21,8 +21,8 @@ export default function HeaderIconPart({ webSitesData }) {
     <Grid
       item
       sx={{
-        mt: "2.4890190336749636vw",
-        ml: "6.734992679355783vw",
+        mt: "2.5vw",
+        ml: "6.8vw",
         display: "flex",
         justifyContent: "flex-start",
         width: "min-content",
@@ -53,7 +53,6 @@ export default function HeaderIconPart({ webSitesData }) {
           anchorEl={anchorEl}
           open={open}
           setOpen={setOpen}
-          webSitesData={webSitesData}
         />
       </Box>
     </Grid>
