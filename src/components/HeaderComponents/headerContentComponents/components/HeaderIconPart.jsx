@@ -20,21 +20,32 @@ export default function HeaderIconPart() {
   return (
     <Grid
       item
-      sx={{
+      sx={(theme) => ({
         mt: "2.5vw",
         ml: "6.8vw",
         display: "flex",
         justifyContent: "flex-start",
         width: "min-content",
         flexDirection: "column",
-      }}
+        "& .logo": {
+          width: "221px",
+          height: "221px",
+          [theme.breakpoints.down("1400")]: {
+            width: "120px",
+            height: "120px",
+          },
+          [theme.breakpoints.down("md")]: {
+            width: "90px",
+            height: "90px",
+          },
+          [theme.breakpoints.down("sm")]: {
+            width: "62px",
+            height: "90px",
+          },
+        },
+      })}
     >
-      <img
-        src={Logo}
-        style={{
-          width: "10vw",
-        }}
-      />
+      <img src={Logo} className="logo" />
       <Box
         sx={(theme) => ({
           display: "flex",
@@ -46,10 +57,21 @@ export default function HeaderIconPart() {
           },
         })}
       >
-        <Box onClick={handleClick} sx = {{
-          cursor : "pointer"
-        }}>
-          <img src={IpadHeaderIcon} width = "15vw"/>
+        <Box
+          onClick={handleClick}
+          sx={(theme) => ({
+            cursor: "pointer",
+            "& img": {
+              width: "26px",
+              height: "16px",
+              [theme.breakpoints.down("sm")]: {
+                width: "17px",
+                height: "12px",
+              },
+            },
+          })}
+        >
+          <img src={IpadHeaderIcon} width="15vw" />
         </Box>
         <HeaderIconPartMobileMenu
           anchorEl={anchorEl}

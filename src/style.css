@@ -6,3 +6,7 @@
   box-sizing: border-box;
   font-family: "Arimo";
 }
+
+body {
+  background: #12112c;
+}
