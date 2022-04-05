@@ -23,7 +23,7 @@ export default function Button({ el, id, activeId, setActiveId }) {
         cursor: "pointer",
         transition: "all .2s ease-in-out",
         margin: "0 22.5px",
-        [theme.breakpoints.down("1024")]: {
+        [theme.breakpoints.down("1050")]: {
           mb: "1%",
           maxWidth: "150px",
           minHeight: "51px",

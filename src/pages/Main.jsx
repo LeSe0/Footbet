@@ -4,13 +4,13 @@ import React from "react";
 import { Box } from "@mui/material";
 // components
 import Menu from "../components/Menu/Menu";
+import News from "../components/MainPageComponents/News/News";
 
 export default function Main() {
   return (
-    <Box sx = {{
-      background : "#12112c"
-    }}>
+    <Box>
       <Menu />
+      <News />
     </Box>
   );
 }
