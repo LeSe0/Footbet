@@ -1,27 +1,28 @@
 // React
-import React from "react";
+import React, { useState } from "react";
 // MUI
 import { Box, Stack } from "@mui/material";
 // components
 import Lines from "../../../../helpers/Lines";
+import NewsItemsModal from "./newsItemsModal/NewsItemsModal";
 
 export default function NewsItems({ data }) {
   return (
     <Stack
-      sx={theme =>({
+      sx={(theme) => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        width: '400px',
-        height: '320px',
+        width: "400px",
+        height: "320px",
         [theme.breakpoints.down("500px")]: {
           minWidth: "120px",
           minHeight: "100px",
         },
-        [theme.breakpoints.down('1024px')] : {
-          minWidth: '200px',
-          minHeight: '150px'
-        }
+        [theme.breakpoints.down("1024px")]: {
+          minWidth: "200px",
+          minHeight: "150px",
+        },
       })}
     >
       <Stack
@@ -45,20 +46,20 @@ export default function NewsItems({ data }) {
           justifyContent: "center",
           backgroundImage: `url("${data.image}")`,
           backgroundPosition: "center",
-          backgroundSize : "cover",
+          backgroundSize: "cover",
           cursor: "pointer",
           [theme.breakpoints.down("500")]: {
             minWidth: "152px !important",
             minHeight: "140px !important",
-            width : "152px !important",
-            height : "140px !important"
+            width: "152px !important",
+            height: "140px !important",
           },
-          [theme.breakpoints.down('1024')] : {
-            minWidth: '183px',
-            minHeight: '159px',
-            width: '183px',
-            height: '159px'
-          }
+          [theme.breakpoints.down("1024")]: {
+            minWidth: "183px",
+            minHeight: "159px",
+            width: "183px",
+            height: "159px",
+          },
         })}
       >
         <Box

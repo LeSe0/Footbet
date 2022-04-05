@@ -9,4 +9,5 @@
 
 body {
   background: #12112c;
+  scroll-behavior: smooth;
 }

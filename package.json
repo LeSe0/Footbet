@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build src/styles.css -o public/styles.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -1,5 +1,5 @@
 // React
-import React from "react";
+import React, { useState } from "react";
 // MUI
 import { Box, Divider, useMediaQuery } from "@mui/material";
 // components
@@ -13,6 +13,7 @@ import img from "../../../images/Main/News/NewsItem1.svg";
 // components
 import PrevArrow from "../../../helpers/PrevArrow";
 import NextArrow from "../../../helpers/NextArrow";
+import NewsItemsModal from "./newsComponents/newsItemsModal/NewsItemsModal";
 
 const data = [
   {
@@ -177,6 +178,8 @@ export default function News() {
   const md = useMediaQuery("(max-width : 1024px)");
   const sm = useMediaQuery("(max-width : 600px)");
 
+  const [isModalActive, toggleModal] = useState(null);
+
   const sliderSettings = {
     slidesToShow: md && !sm ? 3 : sm ? 2 : 4,
     slidesToScroll: md && !sm ? 3 : sm ? 2 : 4,
@@ -219,8 +222,8 @@ export default function News() {
             background: "#2A405A30",
             position: "relative",
             bottom: "0px",
-            mt : "35px",
-            mb : "40px",
+            mt: "35px",
+            mb: "40px",
             "& li": {
               margin: "0",
             },
@@ -236,9 +239,9 @@ export default function News() {
           "& .slick-active button": {
             background: "#9E094A !important",
           },
-          '& .slick-dots li button:before' : {
-            display : "none !important"
-          }
+          "& .slick-dots li button:before": {
+            display: "none !important",
+          },
         }}
       >
         <Slider {...sliderSettings} dots={true}>
@@ -251,6 +254,10 @@ export default function News() {
                   alignItems: "center",
                 }}
                 key={el.title + i}
+                onClick={() => {
+                  toggleModal(i);
+                  window.scroll(0,0);
+                }}
               >
                 <NewsItems data={el} />
               </Box>
@@ -258,6 +265,10 @@ export default function News() {
           })}
         </Slider>
       </Box>
+      <NewsItemsModal
+        isActive={isModalActive}
+        closeModal={() => toggleModal(null)}
+      />
     </Box>
   );
 }
