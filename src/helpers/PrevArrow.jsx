@@ -13,7 +13,7 @@ export default function PrevArrow(props) {
         position: "absolute",
         left: "3%",
         top: "45%",
-        zIndex: "99999",
+        zIndex: "1",
         [theme.breakpoints.down("sm")]: {
           left: "10%",
         },

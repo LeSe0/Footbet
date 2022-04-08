@@ -13,7 +13,7 @@ export default function NextArrow(props) {
         position: "absolute",
         right: "3%",
         top: "45%",
-        zIndex: "9999999",
+        zIndex: "1",
         [theme.breakpoints.down("sm")]: {
           right: "10%",
         },
