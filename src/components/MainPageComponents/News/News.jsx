@@ -254,12 +254,8 @@ export default function News() {
                   alignItems: "center",
                 }}
                 key={el.title + i}
-                onClick={() => {
-                  toggleModal(i);
-                  window.scroll(0,0);
-                }}
               >
-                <NewsItems data={el} />
+                <NewsItems data={el} toggleModal = {toggleModal} index = {i}/>
               </Box>
             );
           })}

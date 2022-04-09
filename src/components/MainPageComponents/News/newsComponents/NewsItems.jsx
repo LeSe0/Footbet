@@ -6,7 +6,7 @@ import { Box, Stack } from "@mui/material";
 import Lines from "../../../../helpers/Lines";
 import NewsItemsModal from "./newsItemsModal/NewsItemsModal";
 
-export default function NewsItems({ data }) {
+export default function NewsItems({ data, toggleModal, index }) {
   return (
     <Stack
       sx={(theme) => ({
@@ -37,6 +37,13 @@ export default function NewsItems({ data }) {
         <Lines width="100%" up={true} />
       </Stack>
       <Box
+        onClick={() => {
+          toggleModal(index);
+          window.scroll(0, 0);
+        }}
+        onDrag = {(e) =>{
+          e.preventDefault()
+        }}
         sx={(theme) => ({
           width: "86%",
           height: "88%",
