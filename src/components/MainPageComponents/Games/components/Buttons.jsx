@@ -13,9 +13,7 @@ const buttonsData = [
   },
 ];
 
-export default function Buttons() {
-  const [activeId, setActiveId] = useState(0);
-
+export default function Buttons({ activeId, setActiveId }) {
   return (
     <Box
       sx={{
@@ -31,7 +29,7 @@ export default function Buttons() {
             activeId={activeId}
             setActiveId={setActiveId}
             el={el}
-            key = {el.title + i}
+            key={el.title + i}
           />
         );
       })}
