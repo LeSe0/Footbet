@@ -1,13 +1,23 @@
 // React
 import { Paper, Popover } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 // components
 import DayNames from "./calendarComponents/DayNames";
 import DaysList from "./calendarComponents/DaysList";
 import Footer from "./calendarComponents/Footer";
 import Header from "./calendarComponents/header";
 
-export default function Calendar({ open, closePopover, anchorEl }) {
+export default function Calendar({
+  open,
+  closePopover,
+  anchorEl,
+  setDay,
+  year,
+  day,
+  month,
+  setYear,
+  setMonth,
+}) {
   const dayNames = [
     {
       shortName: "пн",
@@ -54,10 +64,6 @@ export default function Calendar({ open, closePopover, anchorEl }) {
     "Декабрь",
   ];
 
-  let [month, setMonth] = useState(2);
-  let [year, setYear] = useState(2022);
-  let [day, setDay] = useState(1);
-
   return (
     <Popover
       open={open}
@@ -101,7 +107,7 @@ export default function Calendar({ open, closePopover, anchorEl }) {
           month={month}
           setDay={setDay}
           day={day}
-          closePopover = {closePopover}
+          closePopover={closePopover}
         />
         <Footer
           year={year}

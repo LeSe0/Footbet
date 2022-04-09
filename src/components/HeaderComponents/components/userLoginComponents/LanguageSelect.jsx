@@ -84,7 +84,7 @@ export default function LanguageSelect() {
         onChange={(e) => {
           selectActiveLanguage(e.target.value);
         }}
-        IconComponent={null}
+        IconComponent={''}
         inputProps={{
           name: "age",
           id: "uncontrolled-native",

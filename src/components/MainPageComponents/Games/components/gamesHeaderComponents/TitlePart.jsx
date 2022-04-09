@@ -7,10 +7,14 @@ import calendarImg from "../../../../../images/Main/Games/Calendar.svg";
 import Calendar from "../../../../Calendar/Calendar";
 
 export default function TitlePart({
-  selectDay,
-  selectedDay,
   selectCalendarActive,
   calendarActive,
+  setDay,
+  year,
+  day,
+  month,
+  setYear,
+  setMonth,
 }) {
   const [anchorEl, setAnchorEl] = useState();
 
@@ -71,6 +75,12 @@ export default function TitlePart({
           open={calendarActive}
           closePopover={() => selectCalendarActive(false)}
           anchorEl={anchorEl}
+          setDay={setDay}
+          year={year}
+          day={day}
+          month={month}
+          setYear={setYear}
+          setMonth={setMonth}
         />
       </Box>
     </Box>

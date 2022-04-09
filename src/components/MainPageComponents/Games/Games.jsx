@@ -1,12 +1,13 @@
 // React
 import React, { useState } from "react";
-import { addDays, format, endOfDay } from "date-fns";
+import { format } from "date-fns";
 // MUI
 import { Box , Stack } from "@mui/material";
 // components
 import ContentTitle from "../../../helpers/ContentTitle";
 import Buttons from "./components/Buttons";
 import Gamesheader from "./components/Gamesheader";
+import GamesItems from "./components/GamesContentComponents/GamesItems";
 
 export default function Games() {
   const [selectedDay, selectDay] = useState(format(new Date(), "dd MM yyyy"));
@@ -40,6 +41,7 @@ export default function Games() {
             calendarActive={calendarActive}
             selectCalendarActive={selectCalendarActive}
           />
+          <GamesItems />
         </Stack>
       </Box>
     </Box>
