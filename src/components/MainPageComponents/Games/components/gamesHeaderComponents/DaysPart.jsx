@@ -43,7 +43,7 @@ export default function DaysPart() {
               justifyContent: "center",
               mt: "35px",
             }}
-            key = {el.title + i}
+            key={el.title + i}
           >
             <Typography
               sx={(theme) => ({
@@ -57,6 +57,7 @@ export default function DaysPart() {
                 mr: i == 1 && "19px",
                 ml: i == 1 && "19px",
                 cursor: "pointer",
+                fontFamily: "Arimo",
                 [theme.breakpoints.down("lg")]: {
                   fontSize: "16px",
                 },
@@ -72,6 +73,7 @@ export default function DaysPart() {
                 fontWeight: "700",
                 fontSize: "12px",
                 color: "#D10A52",
+                fontFamily: "Arimo",
                 [theme.breakpoints.up("lg")]: {
                   fontSize: "17px",
                 },

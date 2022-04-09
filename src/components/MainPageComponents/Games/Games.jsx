@@ -22,6 +22,7 @@ export default function Games() {
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
+          mt : '30px'
         }}
       >
         <Stack
@@ -51,6 +52,7 @@ export default function Games() {
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
+          mt : "30px"
         }}
       >
         <Box

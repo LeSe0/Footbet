@@ -23,6 +23,7 @@ export default function Button({ el, id, activeId, setActiveId }) {
         cursor: "pointer",
         transition: "all .2s ease-in-out",
         margin: "0 22.5px",
+        fontFamily : "Arimo",
         [theme.breakpoints.down("1050")]: {
           mb: "1%",
           maxWidth: "150px",
@@ -50,7 +51,8 @@ export default function Button({ el, id, activeId, setActiveId }) {
         }}
       >
         <Typography sx = {{
-            ml : "5px"
+            ml : "5px",
+            fontFamily : "Arimo"
         }}>{el.title}</Typography>
       </Box>
     </Grid>

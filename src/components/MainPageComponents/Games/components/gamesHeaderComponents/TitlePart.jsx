@@ -36,6 +36,7 @@ export default function TitlePart({
           whiteSpace: "pre",
           textOverflow: "ellipsis",
           overflow: "hidden",
+          fontFamily : "Arimo",
           [theme.breakpoints.between("sm", "1024")]: {
             fontSize: "25px",
             lineHeight: "29px",
