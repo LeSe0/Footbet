@@ -85,3 +85,122 @@ export const gamesData = [
     started: "не начался",
   },
 ];
+
+export const comments = [
+  {
+    authorImg: false,
+    rateValue: 0,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },
+  {
+    authorImg: false,
+    rateValue: 1,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },
+  {
+    authorImg: false,
+    rateValue: 2,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },
+  {
+    authorImg: false,
+    rateValue: 3,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },
+  {
+    authorImg: false,
+    rateValue: 4,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },
+  {
+    authorImg: false,
+    rateValue: 5,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },
+  {
+    authorImg: false,
+    rateValue: 4,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },
+  {
+    authorImg: false,
+    rateValue: 4,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },
+  {
+    authorImg: false,
+    rateValue: 4,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },
+  {
+    authorImg: false,
+    rateValue: 1,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },
+  {
+    authorImg: false,
+    rateValue: 2,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },  {
+    authorImg: false,
+    rateValue: 3,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },
+  {
+    authorImg: false,
+    rateValue: 5,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  
+    ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
+    aliquip ex ea commodo consequat.`,
+    authorName : 'Lorem Ipsum',
+    date : "10.02.2022"
+  },
+];

@@ -7,6 +7,7 @@ import Menu from "../components/Menu/Menu";
 import News from "../components/MainPageComponents/News/News";
 import Games from "../components/MainPageComponents/Games/Games";
 import Forecasts from "../components/MainPageComponents/Forecasts/Forecasts";
+import Comments from "../components/Comments/Comments";
 
 export default function Main() {
   return (
@@ -15,6 +16,7 @@ export default function Main() {
       <News />
       <Games />
       <Forecasts />
+      <Comments />
     </Box>
   );
 }

@@ -85,7 +85,7 @@ export default function Forecasts() {
         <Slider {...settings}>
           {data.map((el, i) => {
             return (
-              <ForecastItems el = {el}/>
+              <ForecastItems el = {el} key = {el.guestCommand + el.homeCommand + i}/>
             );
           })}
         </Slider>
