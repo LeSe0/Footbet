@@ -53,8 +53,7 @@ export default function CommentsItemHeader({ item }) {
           </Typography>
           <Hidden mdUp>
             <Rating
-              value={item ? item.rateValue : 0}
-              precision={1}
+              value={item.rateValue}
               emptyIcon={<StarIcon />}
               readOnly
               sx={(theme) => ({

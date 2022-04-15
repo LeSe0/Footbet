@@ -10,8 +10,8 @@ export default function CommentItemContent({item}) {
     <Stack
       sx={theme =>({
         height: "auto",
-        minWidth: "80%",
-        width : "80%",
+        minWidth: "100%",
+        width : "100%",
         background: 'rgba(255, 255, 255, 0.11)',
         borderRadius : "23px",
         mt : "7x",

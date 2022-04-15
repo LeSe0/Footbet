@@ -4,28 +4,26 @@ import React from "react";
 // routes
 import { routes } from "./routes";
 // Router DOM
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 // style
 import "./style.css";
 // components
 import Header from "./components/ConstantComponents/Header";
 
 function App() {
-
-
+  let location = useLocation();
+  const validateLayout = location.pathname != "/login" && location.pathname != "/register"
 
   return (
     <Box className="app">
-      <Header />
+      {validateLayout && <Header />}
       <Routes>
         {routes.map((el, i) => {
           return (
             <Route
               path={el.path}
-              key = {'routePage' + i}
-              element={
-                <el.component/>
-              }
+              key={"routePage" + i}
+              element={<el.component />}
             />
           );
         })}

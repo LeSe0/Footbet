@@ -5,6 +5,7 @@ import usePagination from "../../../helpers/usePagination";
 // MUI
 import { Pagination, PaginationItem, Stack } from "@mui/material";
 import { ArrowForward, ArrowBack } from "@mui/icons-material";
+// components
 import NewestComments from "./SortedComments/NewestComments";
 import MostRatedComments from "./SortedComments/MostRatedComments";
 
@@ -15,7 +16,7 @@ export default function CommentsItems({ activeSortOption }) {
   const count = Math.ceil(comments.length / PER_PAGE);
   const DATA = usePagination(
     activeSortOption == 0
-      ? comments.reverse()
+      ? comments
       : comments.sort((elem1, elem2) =>
           elem1.rateValue > elem2.rateValue ? -1 : 1
         ),

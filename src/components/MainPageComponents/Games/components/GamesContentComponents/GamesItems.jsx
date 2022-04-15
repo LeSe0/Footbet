@@ -121,7 +121,7 @@ export default function GamesItems() {
                 started={el.started}
               />
               <Box
-                sx={{
+                sx={theme =>({
                   width: "79px",
                   height: "27px",
                   background: el.started == "начался" ? "#FFFFFF33" : "none",
@@ -134,12 +134,21 @@ export default function GamesItems() {
                   transition: "0.5s",
                   cursor: "pointer",
                   mr: el.started != "начался" && "3px",
+                  fontSize: '14px',
                   "&:hover": {
                     background:
                       el.started == "начался" ? "#FFFFFF33" : "#A10B45",
                     border: el.started != "начался" && "none",
                   },
-                }}
+                  [theme.breakpoints.between("md" , "lg")] : {
+                    fontSize: '14px',
+                    width : "79px"
+                  },
+                  [theme.breakpoints.down("md")] : {
+                    fontSize: '12px',
+                    width : "53px",
+                  }
+                })}
               >
                 Купить
               </Box>
