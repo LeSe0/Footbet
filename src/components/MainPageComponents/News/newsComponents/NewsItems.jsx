@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { Box, Stack } from "@mui/material";
 // components
 import Lines from "../../../../helpers/Lines";
-import NewsItemsModal from "./newsItemsModal/NewsItemsModal";
 
 export default function NewsItems({ data, toggleModal, index }) {
   return (
@@ -27,14 +26,13 @@ export default function NewsItems({ data, toggleModal, index }) {
     >
       <Stack
         sx={{
-          display: "flex",
           alignItems: "center",
           justifyContent: "center",
           width: "90%",
         }}
       >
-        <Lines width="80%" up={true} />
-        <Lines width="100%" up={true} />
+        <Lines width="80%" up />
+        <Lines width="100%" up />
       </Stack>
       <Box
         onClick={() => {
@@ -86,6 +84,7 @@ export default function NewsItems({ data, toggleModal, index }) {
         </Box>
       </Box>
       <Stack
+        className="test"
         sx={{
           alignItems: "center",
           justifyContent: "center",

@@ -23,6 +23,7 @@ export default function Games() {
         width: "100%",
         mt: "30px",
       }}
+      id = "gamesHash"
     >
       <Stack
         sx={{

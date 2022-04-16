@@ -9,6 +9,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import "./style.css";
 // components
 import Header from "./components/ConstantComponents/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   let location = useLocation();
@@ -28,6 +29,7 @@ function App() {
           );
         })}
       </Routes>
+      {validateLayout && <Footer />}
     </Box>
   );
 }

@@ -194,6 +194,7 @@ export default function News() {
       sx={{
         overflow: "hidden",
       }}
+      id = "newsHash"
     >
       <ContentTitle title="Новости" />
       <Divider

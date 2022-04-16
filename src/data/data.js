@@ -204,3 +204,58 @@ export const comments = [
     date : "10.02.2022"
   },
 ];
+
+
+export const footerRouteData = [
+  [
+    {
+      path : "/",
+      hashLink : "forecastsHash",
+      title : "Прогнозы"
+    },
+    {
+      path : "/",
+      hashLink : "gamesHash",
+      title : "Игры"
+    },
+    {
+      path : "/",
+      hashLink : "newsHash",
+      title : "Новости"
+    },
+  ],
+  [
+    {
+      path : "/aboutus",
+      hashLink : "",
+      title : "О нас"
+    },
+    {
+      path : "/",
+      hashLink : "",
+      title : "Оплата"
+    },
+    {
+      path : "/",
+      hashLink : "",
+      title : "Статистика матчей"
+    },
+  ],
+  [
+    {
+      path : "/register",
+      hashLink : "",
+      title : "Регистрация"
+    },
+    {
+      path : "/rewievs",
+      hashLink : "",
+      title : "Отзывы"
+    },
+    {
+      path : "/contacts",
+      hashLink : "",
+      title : "Контакты"
+    },
+  ]
+]

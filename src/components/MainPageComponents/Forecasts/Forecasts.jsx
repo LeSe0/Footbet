@@ -39,7 +39,7 @@ export default function Forecasts() {
   };
 
   return (
-    <Box>
+    <Box id = "forecastsHash">
       <ContentTitle title="Прогнозы" />
       <Box
         sx={theme =>({
