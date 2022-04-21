@@ -1,7 +1,14 @@
-// React
+W// React
 import React, { useState } from "react";
 // MUI
-import { Select, Grid, Box, MenuItem, FormControl } from "@mui/material";
+import {
+  Select,
+  Grid,
+  Box,
+  MenuItem,
+  FormControl,
+  Typography,
+} from "@mui/material";
 
 export default function LanguageSelect() {
   const data = [
@@ -46,7 +53,7 @@ export default function LanguageSelect() {
         color: "#fff",
         ml: "20.35px",
         mr: "7.320644216691069vw",
-        width : "min-content",
+        width: "min-content",
         "& .MuiSelect-select": {
           display: "flex !important",
           padding: "0 !important",
@@ -68,8 +75,8 @@ export default function LanguageSelect() {
             "& ul": {
               background: "#12112C !important",
               border: "1px solid #9e094a !important",
-              outline : "none !important",
-              color : "white"
+              outline: "none !important",
+              color: "white",
             },
           },
         }}
@@ -77,37 +84,59 @@ export default function LanguageSelect() {
         onChange={(e) => {
           selectActiveLanguage(e.target.value);
         }}
-        IconComponent={null}
+        IconComponent={''}
         inputProps={{
           name: "age",
           id: "uncontrolled-native",
         }}
-        renderValue={(val) => {
+        renderValue={(val, i) => {
           return (
             <Box
-              sx={theme =>({
+              sx={(theme) => ({
                 display: "flex",
-                fontSize: "18px",
-                [theme.breakpoints.down("md")] : {
-                  fontSize : "16px"
-                }
+                fontSize: "1em",
+                [theme.breakpoints.down("lg")]: {
+                  fontSize: "0.4em !important",
+                },
+                // [theme.breakpoints.down("md")]: {
+                //   fontSize: "0.4em !important",
+                // },
               })}
+              key={val + i}
             >
               <Box
                 sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  fontSize: "18px",
                   mr: "2px",
+                  mb: "5px",
                 }}
               >
-                {data[val].lang}
+                <Typography
+                  sx={(theme) => ({
+                    fontSize: "16px",
+                    [theme.breakpoints.down("lg")]: {
+                      fontSize: "0.4em !important",
+                    },
+                    [theme.breakpoints.down("md")]: {
+                      fontSize: "0.4em !important",
+                    },
+                  })}
+                >
+                  {data[val].lang}
+                </Typography>
               </Box>
               <Box
                 sx={{
+                  display: "flex",
+                  mb : "5px",
                   "& img": {
                     borderRadius: "100%",
                   },
                 }}
               >
-                <img src={data[val].icon} />
+                <img src={data[val].icon} height = "20vh"/>
               </Box>
             </Box>
           );
@@ -117,10 +146,15 @@ export default function LanguageSelect() {
           return (
             <MenuItem
               value={i}
-              sx={{
+              sx={(theme) => ({
                 display: "flex",
-                fontSize: "18px",
-              }}
+                fontSize: "1em",
+                justifyContent: "flex-start",
+                [theme.breakpoints.down("lg")]: {
+                  fontSize: "0.7em",
+                },
+              })}
+              key={el.langEng + i}
             >
               <Box
                 sx={{
@@ -130,13 +164,18 @@ export default function LanguageSelect() {
                 {el.langEng}
               </Box>
               <Box
-                sx={{
+                sx={(theme) => ({
+                  display: "flex",
+                  alignItems: "center",
                   "& img": {
                     borderRadius: "100%",
                   },
-                }}
+                  [theme.breakpoints.down("lg")]: {
+                    alignItems: "flex-start",
+                  },
+                })}
               >
-                <img src={el.icon} />
+                <img src={el.icon} width="15vw" />
               </Box>
             </MenuItem>
           );
