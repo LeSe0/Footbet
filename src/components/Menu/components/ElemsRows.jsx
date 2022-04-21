@@ -1,16 +1,16 @@
 // React
-import React from "react";
-// MUI
-import { Box } from "@mui/material";
+import React, { memo } from "react";
+
 // components
+import { Box } from "@mui/material";
 import Button from "../../../helpers/Button";
 
-export default function ElemsRows({
+const ElemsRows = memo(({
   menuData,
   activeId,
   setActiveId,
   setOpenModal
-}) {
+}) => {
   return (
     <Box
       sx={{
@@ -23,7 +23,7 @@ export default function ElemsRows({
     >
       {menuData.map((el, i) => {
         return (
-          <Box key={el.title + i} onClick = {() =>{
+          <Box key={el.title + i} onClick={() => {
             el.path == "contacts" && setOpenModal(true)
           }}>
             <Button
@@ -37,4 +37,6 @@ export default function ElemsRows({
       })}
     </Box>
   );
-}
+})
+
+export default ElemsRows

@@ -1,11 +1,11 @@
 // React
-import React, { useState } from "react";
-// MUI
-import { Box, Stack } from "@mui/material";
+import React, { memo } from "react";
+
 // components
+import { Box, Stack } from "@mui/material";
 import Lines from "../../../../helpers/Lines";
 
-export default function NewsItems({ data, toggleModal, index }) {
+const NewsItems = memo(({ data, toggleModal, index }) => {
   return (
     <Stack
       sx={(theme) => ({
@@ -39,7 +39,7 @@ export default function NewsItems({ data, toggleModal, index }) {
           toggleModal(index);
           window.scroll(0, 0);
         }}
-        onDrag = {(e) =>{
+        onDrag={(e) => {
           e.preventDefault()
         }}
         sx={(theme) => ({
@@ -96,4 +96,6 @@ export default function NewsItems({ data, toggleModal, index }) {
       </Stack>
     </Stack>
   );
-}
+})
+
+export default NewsItems

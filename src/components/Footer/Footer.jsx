@@ -1,15 +1,16 @@
 // React
-import React from "react";
+import React, { memo } from "react";
+
 // images
 import FooterLogo from "../../images/Footer/FooterLogo.svg";
-// MUI
-import { Box, Grid, Stack } from "@mui/material";
+
 // components
 import FooterNavigation from "./components/FooterNavigation";
 import FooterWebSites from "./components/FooterWebSites";
 import FooterCards from "./components/FooterCards";
+import { Box, Grid, Stack } from "@mui/material";
 
-export default function Footer() {
+const Footer = memo(() => {
   return (
     <Box
       sx={{
@@ -43,9 +44,9 @@ export default function Footer() {
             alignItems: "flex-end",
             justifyContent: "flex-end",
             width: "auto",
-            pr : "20px"
+            pr: "20px"
           },
-          [theme.breakpoints.between("md" , "lg")]: {
+          [theme.breakpoints.between("md", "lg")]: {
             flexDirection: "column",
             alignItems: "flex-end",
             justifyContent: "center",
@@ -74,4 +75,6 @@ export default function Footer() {
       </Stack>
     </Box>
   );
-}
+})
+
+export default Footer

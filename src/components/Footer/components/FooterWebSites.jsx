@@ -1,10 +1,11 @@
 // React
-import React from "react";
+import React, { memo } from "react";
 import { ourWebSites } from "../../../routes";
-// MUI
+
+// components
 import { Grid, Stack, Typography } from "@mui/material";
 
-export default function FooterWebSites() {
+const FooterWebSites = memo(() => {
   return (
     <Stack
       sx={(theme) => ({
@@ -61,4 +62,6 @@ export default function FooterWebSites() {
       </Grid>
     </Stack>
   );
-}
+})
+
+export default FooterWebSites

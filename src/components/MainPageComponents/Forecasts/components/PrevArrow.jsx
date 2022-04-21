@@ -1,10 +1,11 @@
 // React
 import React from "react";
-// MUI
+
+// components
 import { Box } from "@mui/material";
 import { ArrowBack } from "@mui/icons-material";
 
-export default function PrevArrow(props) {
+const PrevArrow = (props) => {
   const { onClick } = props;
   return (
     <Box
@@ -20,7 +21,7 @@ export default function PrevArrow(props) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        cursor : "pointer",
+        cursor: "pointer",
         [theme.breakpoints.down("sm")]: {
           width: "34px",
         },
@@ -41,3 +42,5 @@ export default function PrevArrow(props) {
     </Box>
   );
 }
+
+export default PrevArrow

@@ -1,15 +1,19 @@
 // React
-import React from "react";
+import React, { memo } from "react";
+
+// images
 import Visa from "../../../images/Footer/Visa.svg";
 import MasterCard from "../../../images/Footer/MasterCard.svg";
 import Paypal from "../../../images/Footer/Paypal.svg";
+
+// components
 import { Grid, Stack, Typography } from "@mui/material";
 
-export default function FooterCards() {
+const FooterCards = memo(() => {
   return (
-    <Stack sx = {{
-        alignItems : "center",
-        width : "100%",
+    <Stack sx={{
+      alignItems: "center",
+      width: "100%",
     }}>
       <Typography
         sx={{
@@ -19,15 +23,15 @@ export default function FooterCards() {
       >
         Платежные системы
       </Typography>
-      <Grid container sx = {{
-          justifyContent : "center",
-          alignItems : "center",
-          height : "min-content",
-          flexWrap : "nowrap",
-          '& img' : {
-              width : "7vw",
-              height : "2vh"
-          }
+      <Grid container sx={{
+        justifyContent: "center",
+        alignItems: "center",
+        height: "min-content",
+        flexWrap: "nowrap",
+        '& img': {
+          width: "7vw",
+          height: "2vh"
+        }
       }}>
         <Grid item>
           <img src={Paypal} />
@@ -44,7 +48,7 @@ export default function FooterCards() {
           item
           sx={{
             borderLeft: "1px solid #D10A52",
-            height : "min-content"
+            height: "min-content"
           }}
         >
           <img src={MasterCard} />
@@ -52,4 +56,6 @@ export default function FooterCards() {
       </Grid>
     </Stack>
   );
-}
+})
+
+export default FooterCards

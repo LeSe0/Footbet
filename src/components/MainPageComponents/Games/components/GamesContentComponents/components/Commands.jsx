@@ -1,16 +1,16 @@
 // React
-import React from "react";
-// MUI
+import React, { memo } from "react";
+// components
 import { Box, Typography } from "@mui/material";
 
-export default function Commands({
+const Commands = memo(({
   homeComand,
   homeIcon,
   guestComand,
   guestIcon,
   score,
   started
-}) {
+}) => {
   return (
     <Box
       sx={{
@@ -78,9 +78,9 @@ export default function Commands({
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          mr : "30px",
-          ml : "30px",
-          color : "#0BBE28",
+          mr: "30px",
+          ml: "30px",
+          color: "#0BBE28",
           [theme.breakpoints.down("md")]: {
             fontSize: "16px",
           },
@@ -105,7 +105,7 @@ export default function Commands({
             width: "100%",
             display: "flex",
             justifyContent: "center",
-            mt: "3px",         
+            mt: "3px",
             mr: "27px",
             "& img": {
               width: "32px",
@@ -142,4 +142,6 @@ export default function Commands({
       </Box>
     </Box>
   );
-}
+})
+
+export default Commands

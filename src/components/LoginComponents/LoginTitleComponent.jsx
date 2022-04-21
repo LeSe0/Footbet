@@ -1,8 +1,10 @@
 // React
-import React from "react";
+import React, { memo } from "react";
+
+// components
 import { Typography } from "@mui/material";
 
-export default function LoginTitleComponent({ title }) {
+const LoginTitleComponent = memo(({ title }) => {
   return (
     <Typography
       sx={{
@@ -15,4 +17,6 @@ export default function LoginTitleComponent({ title }) {
       {title}
     </Typography>
   );
-}
+})
+
+export default LoginTitleComponent

@@ -1,13 +1,60 @@
 // React
-import { Paper, Popover } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
+
 // components
+import { Paper, Popover } from "@mui/material";
 import DayNames from "./calendarComponents/DayNames";
 import DaysList from "./calendarComponents/DaysList";
 import Footer from "./calendarComponents/Footer";
 import Header from "./calendarComponents/header";
 
-export default function Calendar({
+const dayNames = [
+  {
+    shortName: "пн",
+    longName: "понедельник",
+  },
+  {
+    shortName: "вт",
+    longName: "вторник",
+  },
+  {
+    shortName: "ср",
+    longName: "среда",
+  },
+  {
+    shortName: "чт",
+    longName: "четверг",
+  },
+  {
+    shortName: "пт",
+    longName: "пятница",
+  },
+  {
+    shortName: "сб",
+    longName: "суббота",
+  },
+  {
+    shortName: "вс",
+    longName: "воскресенье",
+  },
+];
+
+const monthNames = [
+  "Январь",
+  "Февраль",
+  "Март",
+  "Апрель",
+  "Май",
+  "Июнь",
+  "Июль",
+  "Август",
+  "Сентябрь",
+  "Октябрь",
+  "Ноябрь",
+  "Декабрь",
+];
+
+const Calendar = memo(({
   open,
   closePopover,
   anchorEl,
@@ -17,53 +64,7 @@ export default function Calendar({
   month,
   setYear,
   setMonth,
-}) {
-  const dayNames = [
-    {
-      shortName: "пн",
-      longName: "понедельник",
-    },
-    {
-      shortName: "вт",
-      longName: "вторник",
-    },
-    {
-      shortName: "ср",
-      longName: "среда",
-    },
-    {
-      shortName: "чт",
-      longName: "четверг",
-    },
-    {
-      shortName: "пт",
-      longName: "пятница",
-    },
-    {
-      shortName: "сб",
-      longName: "суббота",
-    },
-    {
-      shortName: "вс",
-      longName: "воскресенье",
-    },
-  ];
-
-  const monthNames = [
-    "Январь",
-    "Февраль",
-    "Март",
-    "Апрель",
-    "Май",
-    "Июнь",
-    "Июль",
-    "Август",
-    "Сентябрь",
-    "Октябрь",
-    "Ноябрь",
-    "Декабрь",
-  ];
-
+}) => {
   return (
     <Popover
       open={open}
@@ -94,11 +95,8 @@ export default function Calendar({
         }}
       >
         <Header
-          setDay={setDay}
           year={year}
           month={month}
-          setYear={setYear}
-          setMonth={setMonth}
           monthNames={monthNames}
         />
         <DayNames dayNames={dayNames} />
@@ -120,4 +118,6 @@ export default function Calendar({
       </Paper>
     </Popover>
   );
-}
+})
+
+export default Calendar

@@ -1,8 +1,9 @@
 // React
 import React, { useState } from "react";
-// MUI
-import { Grid, Typography } from "@mui/material";
 import { addDays, format } from "date-fns";
+
+// components
+import { Grid, Typography } from "@mui/material";
 
 export default function DaysPart() {
   let today = new Date();

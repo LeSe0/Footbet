@@ -1,7 +1,9 @@
 // React
 import React, { useState } from "react";
-// MUI
+
+// components
 import { Box } from "@mui/material";
+
 // images
 import calendarImg from "../../../../../images/Main/Games/Calendar.svg";
 import Calendar from "../../../../Calendar/Calendar";
@@ -36,7 +38,7 @@ export default function TitlePart({
           whiteSpace: "pre",
           textOverflow: "ellipsis",
           overflow: "hidden",
-          fontFamily : "Arimo",
+          fontFamily: "Arimo",
           [theme.breakpoints.between("sm", "1024")]: {
             fontSize: "25px",
             lineHeight: "29px",

@@ -1,15 +1,21 @@
 // React
 import React, { useState } from "react";
-import { Stack, Typography } from "@mui/material";
 import Joi from "joi";
 // components
+import { Stack, Typography } from "@mui/material";
 import LoginButtonComponent from "../../components/LoginComponents/LoginButtonComponent";
 import LoginContentPart from "../../components/LoginComponents/LoginContentPart";
 import LoginHeadPart from "../../components/LoginComponents/LoginHeadPart";
 import LoginTitleComponent from "../../components/LoginComponents/LoginTitleComponent";
 
 export default function Main({ maxMobile, changeActivePage }) {
-  const [validateInputs, validation] = useState();
+  const [validateInputs, validation] = useState({
+    value: {
+      email: "",
+      password: ""
+    }
+  });
+
   const [login, changeLogin] = useState("");
   const [password, changePassword] = useState("");
 
@@ -28,8 +34,9 @@ export default function Main({ maxMobile, changeActivePage }) {
           scheme.validate({
             email: login,
             password: password,
-          })
+          }, { abortEarly: false })
         );
+        console.log(validateInputs);
       }}
     >
       <Stack

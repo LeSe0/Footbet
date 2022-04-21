@@ -1,10 +1,10 @@
 // React
 import React, { useState } from "react";
-//  MUI
-import { Stack } from "@mui/material";
+
 // components
 import TitlePart from "./gamesHeaderComponents/TitlePart";
 import DaysPart from "./gamesHeaderComponents/DaysPart";
+import { Stack } from "@mui/material";
 
 export default function Gamesheader({
   selectDay,

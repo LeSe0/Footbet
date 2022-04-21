@@ -1,9 +1,10 @@
 // React
-import React from "react";
-// MUI
+import React, { memo } from "react";
+
+// components
 import { Box } from "@mui/material";
 
-export default function ForecastButtons() {
+const ForecastButtons = memo(() => {
   return (
     <Box
       sx={(theme) => ({
@@ -95,4 +96,6 @@ export default function ForecastButtons() {
       </Box>
     </Box>
   );
-}
+})
+
+export default ForecastButtons

@@ -1,21 +1,21 @@
 // React
-import React from "react";
+import React, { memo } from "react";
 import { footerRouteData } from "../../../data/data";
-// MUI
-import { Box, Stack, Typography } from "@mui/material";
-// routing
 import { HashLink } from "react-router-hash-link";
 
-export default function FooterNavigation() {
+// components
+import { Box, Stack, Typography } from "@mui/material";
+
+const FooterNavigation = memo(() => {
   return (
     <Box
       sx={{
         display: "flex",
         position: "relative",
         zIndex: "2",
-        height : "min-content",
-        justifyContent : "center",
-        width : "100%"
+        height: "min-content",
+        justifyContent: "center",
+        width: "100%"
       }}
     >
       {footerRouteData.map((el, i) => {
@@ -74,4 +74,6 @@ export default function FooterNavigation() {
       })}
     </Box>
   );
-}
+})
+
+export default FooterNavigation

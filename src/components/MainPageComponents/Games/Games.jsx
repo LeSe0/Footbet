@@ -1,9 +1,9 @@
 // React
 import React, { useState } from "react";
 import { format } from "date-fns";
-// MUI
-import { Box, Stack, Typography } from "@mui/material";
+
 // components
+import { Box, Stack, Typography } from "@mui/material";
 import ContentTitle from "../../../helpers/ContentTitle";
 import Buttons from "./components/Buttons";
 import Gamesheader from "./components/Gamesheader";
@@ -23,7 +23,7 @@ export default function Games() {
         width: "100%",
         mt: "30px",
       }}
-      id = "gamesHash"
+      id="gamesHash"
     >
       <Stack
         sx={{

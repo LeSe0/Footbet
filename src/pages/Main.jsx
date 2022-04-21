@@ -9,14 +9,14 @@ import Games from "../components/MainPageComponents/Games/Games";
 import Forecasts from "../components/MainPageComponents/Forecasts/Forecasts";
 import Comments from "../components/Comments/Comments";
 
-export default function Main({ toggleModal }) {
+export default function Main() {
   return (
     <Box>
       <Menu />
       <News />
       <Games />
       <Forecasts />
-      <Comments toggleModal={toggleModal} />
+      <Comments  />
     </Box>
   );
 }

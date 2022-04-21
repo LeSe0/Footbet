@@ -1,11 +1,11 @@
 // React
-import React from "react";
-// MUI
-import { Typography, Box } from "@mui/material";
+import React, { memo } from "react";
+
 // components
+import { Typography, Box } from "@mui/material";
 import ForecastButtons from "./ForecastButtons";
 
-export default function ForecastItems({ el }) {
+const ForecastItems = memo(({ el }) => {
   return (
     <Box
       sx={{
@@ -159,4 +159,6 @@ export default function ForecastItems({ el }) {
       </Box>
     </Box>
   );
-}
+})
+
+export default ForecastItems

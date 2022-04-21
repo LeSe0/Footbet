@@ -1,13 +1,17 @@
 // React
-import React from "react";
+import React, { useState } from "react";
 // images
 import registerIcon from "../../../../images/Header/registerIcon.svg";
 import loginIcon from "../../../../images/Header/LoginIcon.svg";
 // MUI
 import { Grid, Typography, Box } from "@mui/material";
 import LanguageSelect from "./LanguageSelect";
+import Login from "../../../../pages/Login";
 
-export default function UserLogin({ toggleModal }) {
+export default function UserLogin() {
+
+  const [modalOpen, toggleModal] = useState(false);
+
   return (
     <Grid
       item
@@ -80,6 +84,7 @@ export default function UserLogin({ toggleModal }) {
         </Typography>
       </Box>
       <LanguageSelect />
+      <Login toggleModal={modalOpen} closeModal={() => { toggleModal(false) }} />
     </Grid>
   );
 }

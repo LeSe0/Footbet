@@ -1,9 +1,11 @@
 // React
-import React from "react";
+import React, { memo } from "react";
 import { loginHeaderData } from "../../data/data.js";
+
+// components
 import { Grid, Link } from "@mui/material";
 
-export default function LoginHeadPart() {
+const LoginHeadPart = memo(() => {
   return (
     <Grid
       container
@@ -55,4 +57,6 @@ export default function LoginHeadPart() {
       })}
     </Grid>
   );
-}
+})
+
+export default LoginHeadPart

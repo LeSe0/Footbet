@@ -1,11 +1,16 @@
 // React
-import React from "react";
-// MUI
+import React, { memo } from "react";
+
+// components
 import { Box, Typography } from "@mui/material";
 
-function Header({ year, month, setYear, setMonth, monthNames, setDay }) {
+const Header = memo(({
+  year,
+  month,
+  monthNames,
+}) => {
   return (
-    <Box sx = {{
+    <Box sx={{
       display: 'flex',
       justifyContent: 'center',
       width: '100%',
@@ -13,7 +18,7 @@ function Header({ year, month, setYear, setMonth, monthNames, setDay }) {
       paddingright: '60px',
       height: 'max-content',
     }}>
-      <Typography component = "span" sx = {{
+      <Typography component="span" sx={{
         fontWeight: 700,
         fontSize: '26px',
         lineHeight: '20px',
@@ -21,6 +26,6 @@ function Header({ year, month, setYear, setMonth, monthNames, setDay }) {
       }}>{monthNames[month]} {year}</Typography>
     </Box>
   );
-}
+})
 
 export default Header;

@@ -1,19 +1,19 @@
 // React
 import React, { useState } from "react";
-// MUI
-import { Box, Divider, useMediaQuery } from "@mui/material";
-// components
-import ContentTitle from "../../../helpers/ContentTitle";
-// slick slider
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+// components
+import ContentTitle from "../../../helpers/ContentTitle";
+import { Box, Divider, useMediaQuery } from "@mui/material";
 import Slider from "react-slick";
 import NewsItems from "./newsComponents/NewsItems";
-import img from "../../../images/Main/News/NewsItem1.svg";
-// components
 import PrevArrow from "../../../helpers/PrevArrow";
 import NextArrow from "../../../helpers/NextArrow";
 import NewsItemsModal from "./newsComponents/newsItemsModal/NewsItemsModal";
+
+// images
+import img from "../../../images/Main/News/NewsItem1.svg";
 
 const data = [
   {
@@ -194,7 +194,7 @@ export default function News() {
       sx={{
         overflow: "hidden",
       }}
-      id = "newsHash"
+      id="newsHash"
     >
       <ContentTitle title="Новости" />
       <Divider
@@ -256,7 +256,7 @@ export default function News() {
                 }}
                 key={el.title + i}
               >
-                <NewsItems data={el} toggleModal = {toggleModal} index = {i}/>
+                <NewsItems data={el} toggleModal={toggleModal} index={i} />
               </Box>
             );
           })}

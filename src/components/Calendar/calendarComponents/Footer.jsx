@@ -1,17 +1,18 @@
 // React
-import React from "react";
-// MUI
+import React, { memo } from "react";
+
+// components
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { Box } from "@mui/material";
 
-export default function Footer({
+const Footer = memo(({
   year,
   month,
   setMonth,
   setDay,
   setYear,
   monthNames,
-}) {
+}) => {
   return (
     <Box
       sx={{
@@ -69,4 +70,6 @@ export default function Footer({
       />
     </Box>
   );
-}
+})
+
+export default Footer

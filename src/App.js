@@ -1,6 +1,6 @@
 // React
 import { Box } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 // routes
 import { routes } from "./routes";
 // Router DOM
@@ -10,18 +10,15 @@ import "./style.css";
 // components
 import Header from "./components/ConstantComponents/Header";
 import Footer from "./components/Footer/Footer";
-import Login from "./pages/Login";
 
 function App() {
   let location = useLocation();
   const validateLayout =
     location.pathname != "/login" && location.pathname != "/register";
 
-  const [modalOpen, toggleModal] = useState(false);
-
   return (
     <Box className="app">
-      {validateLayout && <Header toggleModal={toggleModal} />}
+      {validateLayout && <Header  />}
       <Routes>
         {routes.map((el, i) => {
           return (
@@ -29,18 +26,12 @@ function App() {
               path={el.path}
               key={"routePage" + i}
               element={
-                <el.component modalOpen={modalOpen} toggleModal={toggleModal} />
+                <el.component />
               }
             />
           );
         })}
       </Routes>
-      <Login
-        toggleModal={modalOpen}
-        closeModal={() => {
-          toggleModal(false);
-        }}
-      />
       {validateLayout && <Footer />}
     </Box>
   );

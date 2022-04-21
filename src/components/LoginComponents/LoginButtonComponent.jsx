@@ -1,8 +1,10 @@
 // React
-import React from "react";
+import React, { memo } from "react";
+
+//components
 import { Button } from "@mui/material";
 
-export default function LoginButtonComponent({ title, path, validateInputs }) {
+const LoginButtonComponent = memo(({ title, validateInputs }) => {
   return (
     <Button
       href={validateInputs ? "" : ""}
@@ -23,4 +25,6 @@ export default function LoginButtonComponent({ title, path, validateInputs }) {
       {title}
     </Button>
   );
-}
+})
+
+export default LoginButtonComponent

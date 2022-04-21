@@ -1,4 +1,4 @@
-W// React
+// React
 import React, { useState } from "react";
 // MUI
 import {
@@ -98,9 +98,6 @@ export default function LanguageSelect() {
                 [theme.breakpoints.down("lg")]: {
                   fontSize: "0.4em !important",
                 },
-                // [theme.breakpoints.down("md")]: {
-                //   fontSize: "0.4em !important",
-                // },
               })}
               key={val + i}
             >

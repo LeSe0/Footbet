@@ -1,7 +1,9 @@
 // React
 import React, { useState } from "react";
 import { gamesData } from "../../../../../data/data";
-// MUI
+import usePagination from "../../../../../helpers/usePagination";
+
+// components
 import {
   Box,
   Divider,
@@ -11,8 +13,6 @@ import {
   Typography,
 } from "@mui/material";
 import { ArrowForward, ArrowBack } from "@mui/icons-material";
-// components
-import usePagination from "../../../../../helpers/usePagination";
 import Commands from "./components/Commands";
 
 export default function GamesItems() {
@@ -121,7 +121,7 @@ export default function GamesItems() {
                 started={el.started}
               />
               <Box
-                sx={theme =>({
+                sx={theme => ({
                   width: "79px",
                   height: "27px",
                   background: el.started == "начался" ? "#FFFFFF33" : "none",
@@ -140,13 +140,13 @@ export default function GamesItems() {
                       el.started == "начался" ? "#FFFFFF33" : "#A10B45",
                     border: el.started != "начался" && "none",
                   },
-                  [theme.breakpoints.between("md" , "lg")] : {
+                  [theme.breakpoints.between("md", "lg")]: {
                     fontSize: '14px',
-                    width : "79px"
+                    width: "79px"
                   },
-                  [theme.breakpoints.down("md")] : {
+                  [theme.breakpoints.down("md")]: {
                     fontSize: '12px',
-                    width : "53px",
+                    width: "53px",
                   }
                 })}
               >
@@ -156,11 +156,11 @@ export default function GamesItems() {
           </Grid>
         );
       })}
-      <Divider sx = {{
+      <Divider sx={{
         background: '#2A405A33',
-        height : "34px",
-        width : "100%"
-      }}/>
+        height: "34px",
+        width: "100%"
+      }} />
       <Pagination
         count={count}
         size="large"
@@ -178,13 +178,13 @@ export default function GamesItems() {
         shape="rounded"
         onChange={handleClick}
         sx={{
-          display : "flex",
-          justifyContent : "center",
-          alignItems : "center",
-          pb : "25px",
-          pt : "12px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          pb: "25px",
+          pt: "12px",
           "& .css-yx0nvq-MuiButtonBase-root-MuiPaginationItem-root": {
-            background : "white",
+            background: "white",
             borderRadius: "100%",
             width: "4px",
             padding: "0px",
@@ -193,13 +193,13 @@ export default function GamesItems() {
           },
           "& .MuiPaginationItem-previousNext": {
             background: "#FFFFFF33",
-            color : "#9E094A",
+            color: "#9E094A",
             borderRadius: "8px",
             width: "20px",
             padding: "0px",
             height: "20px",
             minWidth: "0px",
-            '&:hover' : {
+            '&:hover': {
               background: "#FFFFFF33",
             }
           },

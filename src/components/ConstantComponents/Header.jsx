@@ -1,12 +1,12 @@
 // React
-import React from "react";
-// MUI
-import { Grid, Hidden } from "@mui/material";
+import React, { memo } from "react";
+
 // components
+import { Grid, Hidden } from "@mui/material";
 import HeaderContent from "../HeaderComponents/headerContentComponents/HeaderContent";
 import HeaderWebSites from "../HeaderComponents/headerWebSitesComponents/HeaderWebSites";
 
-export default function Header({ toggleModal }) {
+const Header = memo(({ toggleModal }) => {
   return (
     <Grid
       container
@@ -26,4 +26,7 @@ export default function Header({ toggleModal }) {
       <HeaderContent toggleModal={toggleModal} />
     </Grid>
   );
-}
+})
+
+
+export default Header

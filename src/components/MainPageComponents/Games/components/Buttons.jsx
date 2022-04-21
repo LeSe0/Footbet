@@ -1,6 +1,6 @@
 // React
-import React, { useState } from "react";
-// MUI
+import React, { memo } from "react";
+// components
 import { Box } from "@mui/material";
 import Button from "../../../../helpers/Button";
 
@@ -13,7 +13,7 @@ const buttonsData = [
   },
 ];
 
-export default function Buttons({ activeId, setActiveId }) {
+const Buttons = memo(({ activeId, setActiveId }) => {
   return (
     <Box
       sx={{
@@ -35,4 +35,6 @@ export default function Buttons({ activeId, setActiveId }) {
       })}
     </Box>
   );
-}
+})
+
+export default Buttons

@@ -1,16 +1,17 @@
 // React
-import React from "react";
-import { Stack, Typography } from "@mui/material";
+import React, { memo } from "react";
+
 // components
+import { Stack, Typography } from "@mui/material";
 import LoginInputComponent from "./LoginInputComponent";
 
-export default function LoginContentPart({
+const LoginContentPart = memo(({
   validateInputs,
   login,
   changeLogin,
   password,
   changePassword,
-}) {
+}) => {
   return (
     <Stack
       sx={{
@@ -22,15 +23,15 @@ export default function LoginContentPart({
         placeholder="Адрес почты"
         changeLogin={changeLogin}
         login={login}
-        validateInputs = {validateInputs}
-        type = "email"
+        validateInputs={validateInputs}
+        type="email"
       />
       <LoginInputComponent
         placeholder="Пароль"
         validateInputs={validateInputs}
         changePassword={changePassword}
         password={password}
-        type = "password"
+        type="password"
       />
       <Typography
         textAlign="left"
@@ -44,4 +45,6 @@ export default function LoginContentPart({
       </Typography>
     </Stack>
   );
-}
+})
+
+export default LoginContentPart

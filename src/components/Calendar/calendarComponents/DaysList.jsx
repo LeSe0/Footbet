@@ -1,10 +1,17 @@
 // React
-import React from "react";
+import React, { memo } from "react";
 import { format } from "date-fns";
-// MUI
+
+// components
 import { Box, Typography } from "@mui/material";
 
-export default function DaysList({ year, month, setDay, day, closePopover }) {
+const DaysList = memo(({
+  year,
+  month,
+  setDay,
+  day,
+  closePopover
+}) => {
   let date = new Date(year, month);
   let date2 = new Date(year, month + 1);
   let daysInMonth = Math.round((date2 - date) / 1000 / 3600 / 24); // 31
@@ -42,22 +49,22 @@ export default function DaysList({ year, month, setDay, day, closePopover }) {
               justifyContent: "center",
               background:
                 new Date().getMonth() == month &&
-                el.day == new Date().getDate() &&
-                new Date().getFullYear() == 2022
+                  el.day == new Date().getDate() &&
+                  new Date().getFullYear() == 2022
                   ? "#FFFF76"
                   : "white",
               cursor: el.btn && "pointer",
               "&:hover": {
                 background:
                   new Date().getMonth() == month &&
-                  el.day == new Date().getDate() &&
-                  new Date().getFullYear() == 2022 &&
-                  el.btn == true
+                    el.day == new Date().getDate() &&
+                    new Date().getFullYear() == 2022 &&
+                    el.btn == true
                     ? "#ffffa9"
                     : "#e6e6e6",
               },
             }}
-            onClick = {() =>{
+            onClick={() => {
               el.btn && setDay(el.day);
               el.btn && closePopover()
             }}
@@ -78,7 +85,7 @@ export default function DaysList({ year, month, setDay, day, closePopover }) {
                 fontSize: "20px",
                 color:
                   format(new Date(year, month, el.day), "EEEE") == "Thursday" ||
-                  format(new Date(year, month, el.day), "EEEE") == "Friday"
+                    format(new Date(year, month, el.day), "EEEE") == "Friday"
                     ? "#D10000"
                     : "black",
               }}
@@ -90,4 +97,6 @@ export default function DaysList({ year, month, setDay, day, closePopover }) {
       })}
     </Box>
   );
-}
+})
+
+export default DaysList

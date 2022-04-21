@@ -1,11 +1,13 @@
 // React
-import React from "react";
+import React, { memo } from "react";
+
 // images
 import img from "../../../../../images/Main/News/newsModal/soccerPlayer2.svg";
-// MUI
+
+// components
 import { Box, Modal, Stack } from "@mui/material";
 
-export default function NewsItemsModal({ isActive, closeModal }) {
+const NewsItemsModal = memo(({ isActive, closeModal }) => {
   return (
     <Modal
       open={isActive != null}
@@ -121,10 +123,10 @@ export default function NewsItemsModal({ isActive, closeModal }) {
                   lineHeight: "12px",
                   letterSpacing: ".07em",
                 },
-                [theme.breakpoints.down("660")] : {
-                    fontSize: '8px',
-                    lineHeight: '10px',
-                    letterSpacing: '.07em'
+                [theme.breakpoints.down("660")]: {
+                  fontSize: '8px',
+                  lineHeight: '10px',
+                  letterSpacing: '.07em'
                 }
               })}
             >
@@ -145,4 +147,6 @@ export default function NewsItemsModal({ isActive, closeModal }) {
       </Box>
     </Modal>
   );
-}
+})
+
+export default NewsItemsModal

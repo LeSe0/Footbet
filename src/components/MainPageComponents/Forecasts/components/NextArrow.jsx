@@ -1,10 +1,11 @@
 // React
-import React from "react";
-// MUI
+import React, { memo } from "react";
+
+// components
 import { Box } from "@mui/material";
 import { ArrowForward } from "@mui/icons-material";
 
-export default function NextArrow(props) {
+const NextArrow = memo((props) => {
   const { onClick } = props;
 
   return (
@@ -41,4 +42,6 @@ export default function NextArrow(props) {
       />
     </Box>
   );
-}
+})
+
+export default NextArrow

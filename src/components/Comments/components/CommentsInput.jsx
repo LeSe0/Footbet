@@ -1,11 +1,15 @@
 // React
-import React from "react";
-// MUI
+import React, { useState } from "react";
 import { Box, Rating, Stack, TextField } from "@mui/material";
 import { useLocation } from "react-router-dom";
+// components
+import Login from "../../../pages/Login";
 
-export default function CommentsInput({ rateWebSite, changeRating, toggleModal }) {
+export default function CommentsInput({ rateWebSite, changeRating }) {
   let location = useLocation();
+
+  const [modalOpen, toggleModal] = useState(false);
+
   return (
     <Stack
       sx={{
@@ -76,7 +80,7 @@ export default function CommentsInput({ rateWebSite, changeRating, toggleModal }
             },
           },
         })}
-        multiline = {true}
+        multiline={true}
         placeholder="Оставить отзыв..."
       />
       <Box
@@ -111,8 +115,8 @@ export default function CommentsInput({ rateWebSite, changeRating, toggleModal }
             justifyContent: "center",
             alignItems: "center",
             borderRadius: "8px",
-            position : "relative",
-            zIndex : "2",
+            position: "relative",
+            zIndex: "2",
             cursor: "pointer",
             [theme.breakpoints.down("md")]: {
               width: "64px",
@@ -134,6 +138,12 @@ export default function CommentsInput({ rateWebSite, changeRating, toggleModal }
           Отправить
         </Box>
       </Box>
+      <Login
+        toggleModal={modalOpen}
+        closeModal={() => {
+          toggleModal(false);
+        }}
+      />
     </Stack>
   );
 }
