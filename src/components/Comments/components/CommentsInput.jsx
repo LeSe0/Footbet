@@ -2,12 +2,10 @@
 import React from "react";
 // MUI
 import { Box, Rating, Stack, TextField } from "@mui/material";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-export default function CommentsInput({ rateWebSite, changeRating }) {
+export default function CommentsInput({ rateWebSite, changeRating, toggleModal }) {
   let location = useLocation();
-  let navigate = useNavigate();
-
   return (
     <Stack
       sx={{
@@ -38,7 +36,7 @@ export default function CommentsInput({ rateWebSite, changeRating }) {
       />
       <TextField
         InputLabelProps={{
-          shrink: true,
+          shrink: 'true',
         }}
         sx={(theme) => ({
           width: "100%",
@@ -78,7 +76,7 @@ export default function CommentsInput({ rateWebSite, changeRating }) {
             },
           },
         })}
-        multiline
+        multiline = {true}
         placeholder="Оставить отзыв..."
       />
       <Box
@@ -113,6 +111,8 @@ export default function CommentsInput({ rateWebSite, changeRating }) {
             justifyContent: "center",
             alignItems: "center",
             borderRadius: "8px",
+            position : "relative",
+            zIndex : "2",
             cursor: "pointer",
             [theme.breakpoints.down("md")]: {
               width: "64px",
@@ -121,14 +121,14 @@ export default function CommentsInput({ rateWebSite, changeRating }) {
               borderRadius: "4px",
             },
             [theme.breakpoints.between("md", "lg")]: {
-              width: "64px",
-              height: "20px",
-              fontSize: "10px",
+              width: "139px",
+              height: "38px",
+              fontSize: "17px",
               borderRadius: "8px",
             },
           })}
           onClick={() => {
-            !location.search.length > 0 && navigate("login");
+            !location.search.length > 0 && toggleModal(true);
           }}
         >
           Отправить

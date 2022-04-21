@@ -8,7 +8,7 @@ import { Grid } from "@mui/material";
 import HeaderIconPart from "./components/HeaderIconPart";
 import FootballerPart from "./components/FootballerPart";
 
-export default function HeaderContent() {
+export default function HeaderContent({ toggleModal }) {
   return (
     <Grid
       item
@@ -25,7 +25,7 @@ export default function HeaderContent() {
       }}
     >
       <HeaderIconPart />
-      <FootballerPart />
+      <FootballerPart toggleModal={toggleModal} />
     </Grid>
   );
 }

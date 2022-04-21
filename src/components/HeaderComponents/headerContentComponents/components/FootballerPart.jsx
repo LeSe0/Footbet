@@ -5,7 +5,7 @@ import { Grid } from "@mui/material";
 // components
 import UserLogin from "../../components/userLoginComponents/UserLogin";
 
-export default function FootballerPart() {
+export default function FootballerPart({ toggleModal }) {
   return (
     <Grid
       container
@@ -49,7 +49,7 @@ export default function FootballerPart() {
           },
         })}
       >
-        <UserLogin />
+        <UserLogin toggleModal={toggleModal} />
       </Grid>
     </Grid>
   );

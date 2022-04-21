@@ -8,7 +8,7 @@ import CommentsHeader from "./components/CommentsHeader";
 import CommentsItems from "./components/CommentsItems";
 import CommentsInput from "./components/CommentsInput";
 
-export default function Comments() {
+export default function Comments({ toggleModal }) {
   const [activeSortOption, changeSortOption] = useState(0);
   const [rateWebSite, changeRating] = useState(0);
 
@@ -37,7 +37,11 @@ export default function Comments() {
         changeSortOption={changeSortOption}
       />
       <CommentsItems activeSortOption={activeSortOption} />
-      <CommentsInput rateWebSite = {rateWebSite} changeRating = {changeRating}/>
+      <CommentsInput
+        rateWebSite={rateWebSite}
+        changeRating={changeRating}
+        toggleModal={toggleModal}
+      />
     </Box>
   );
 }

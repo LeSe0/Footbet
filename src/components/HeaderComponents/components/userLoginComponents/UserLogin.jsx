@@ -7,7 +7,7 @@ import loginIcon from "../../../../images/Header/LoginIcon.svg";
 import { Grid, Typography, Box } from "@mui/material";
 import LanguageSelect from "./LanguageSelect";
 
-export default function UserLogin() {
+export default function UserLogin({ toggleModal }) {
   return (
     <Grid
       item
@@ -23,11 +23,11 @@ export default function UserLogin() {
       <Box
         sx={{
           height: "min-content",
-          display : "flex",
-          alignItems : "center",
+          display: "flex",
+          alignItems: "center",
         }}
       >
-        <img src={registerIcon} width = "15vw"/>
+        <img src={registerIcon} width="15vw" />
         <Typography
           sx={(theme) => ({
             ml: "5px",
@@ -53,9 +53,13 @@ export default function UserLogin() {
           ml: "20px",
           height: "min-content",
           color: "#fff",
+          cursor: "pointer",
+        }}
+        onClick={() => {
+          toggleModal(true);
         }}
       >
-        <img src={loginIcon} width = "15vw"/>
+        <img src={loginIcon} width="15vw" />
         <Typography
           sx={(theme) => ({
             borderRight: "2px solid #FFFFFF",
