@@ -1,9 +1,13 @@
 // React
 import React, { useState } from "react";
-import { Box, Modal, useMediaQuery } from "@mui/material";
-import { Close } from "@mui/icons-material";
 // components
+import { Box, Modal, Stack, useMediaQuery } from "@mui/material";
+import { ArrowBack, Close } from "@mui/icons-material";
 import Main from "../subpages/Authorization/Main";
+import ForgotPassword from "../subpages/Authorization/ForgotPassword";
+import Authenticate from "../subpages/Authorization/Authenticate";
+import CreateNewPassword from "../subpages/Authorization/CreateNewPassword";
+import ActionSuccess from "../subpages/Authorization/ActionSuccess";
 
 export default function Login({ toggleModal, closeModal }) {
   const maxMobile = useMediaQuery("(min-width : 500px)");
@@ -11,10 +15,41 @@ export default function Login({ toggleModal, closeModal }) {
 
   const page = [
     <Main maxMobile={maxMobile} changeActivePage={changeActivePage} />,
+    <ForgotPassword changeActivePage={changeActivePage} maxMobile={maxMobile} />,
+    <Authenticate changeActivePage={changeActivePage} />,
+    <CreateNewPassword changeActivePage={changeActivePage} />,
+    <ActionSuccess closeModal={closeModal} />
   ];
 
+  const activeButton = [
+    <Close
+      onClick={() => {
+        closeModal();
+        changeActivePage(0)
+      }}
+      sx={{
+        cursor: "pointer",
+        mt: "15px",
+        ml: "15px",
+      }}
+    />,
+    <ArrowBack
+      onClick={() => {
+        changeActivePage(activePage - 1)
+      }}
+      sx={{
+        cursor: "pointer",
+        mt: "15px",
+        ml: "15px"
+      }}
+    />
+  ]
+
   return (
-    <Modal open={toggleModal} onClose={closeModal}>
+    <Modal open={toggleModal} onClose={() => {
+      closeModal();
+      changeActivePage(0)
+    }}>
       <Box
         sx={{
           position: "absolute",
@@ -28,19 +63,13 @@ export default function Login({ toggleModal, closeModal }) {
           color: "white",
           mb: { xs: "0", md: "61px" },
           borderRadius: "10px",
-          "& form": {
+          minWidth: maxMobile ? "450px" : "auto",
+          "& > form": {
             height: "100%",
           },
         }}
       >
-        <Close
-          onClick={closeModal}
-          sx={{
-            cursor: "pointer",
-            mt: "15px",
-            ml: "15px",
-          }}
-        />
+        {activeButton[activePage >= 1 && activePage != page.length - 1 ? 1 : 0]}
         {page[activePage]}
       </Box>
     </Modal>

@@ -1,6 +1,5 @@
 // React
 import React, { memo } from "react";
-
 // components
 import { Stack, Typography } from "@mui/material";
 import LoginInputComponent from "./LoginInputComponent";
@@ -11,6 +10,7 @@ const LoginContentPart = memo(({
   changeLogin,
   password,
   changePassword,
+  changeActivePage
 }) => {
   return (
     <Stack
@@ -39,7 +39,9 @@ const LoginContentPart = memo(({
           width: "80%",
           mt: "1%",
           fontSize: "0.8rem",
+          cursor: "pointer"
         }}
+        onClick={() => changeActivePage(1)}
       >
         Забыли Пароль?
       </Typography>

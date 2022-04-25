@@ -1,8 +1,8 @@
 // React
 import React, { useState } from "react";
-import { Box, Rating, Stack, TextField } from "@mui/material";
 import { useLocation } from "react-router-dom";
 // components
+import { Box, Rating, Stack, TextField } from "@mui/material";
 import Login from "../../../pages/Login";
 
 export default function CommentsInput({ rateWebSite, changeRating }) {
@@ -118,7 +118,7 @@ export default function CommentsInput({ rateWebSite, changeRating }) {
             position: "relative",
             zIndex: "2",
             cursor: "pointer",
-            [theme.breakpoints.down("md")]: {
+            [theme.breakpoints.down("sm")]: {
               width: "64px",
               height: "20px",
               fontSize: "10px",
@@ -130,6 +130,11 @@ export default function CommentsInput({ rateWebSite, changeRating }) {
               fontSize: "17px",
               borderRadius: "8px",
             },
+            [theme.breakpoints.between("sm", "md")]: {
+              width: "95px",
+              height: "30px",
+              fontSize: "14px"
+            }
           })}
           onClick={() => {
             !location.search.length > 0 && toggleModal(true);

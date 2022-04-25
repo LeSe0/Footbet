@@ -36,7 +36,6 @@ export default function Main({ maxMobile, changeActivePage }) {
             password: password,
           }, { abortEarly: false })
         );
-        console.log(validateInputs);
       }}
     >
       <Stack
@@ -44,24 +43,26 @@ export default function Main({ maxMobile, changeActivePage }) {
           alignItems: "center",
           justifyContent: maxMobile ? "flex-start" : "center",
           height: "100%",
+          width: "100%"
         }}
       >
         <LoginHeadPart />
-        <LoginTitleComponent title={"Авторизация"} />
+        <LoginTitleComponent title="Авторизация" />
         <LoginContentPart
           validateInputs={validateInputs}
           login={login}
           password={password}
           changeLogin={changeLogin}
           changePassword={changePassword}
+          changeActivePage={changeActivePage}
         />
-        <LoginButtonComponent title={"Войти"} validateInputs={validateInputs} />
+        <LoginButtonComponent title="Войти" validateInputs={validateInputs} />
         <Typography
           component="span"
           sx={{
             pt: "15px",
             fontSize: { xs: "13px", sm: "14px", lg: "15px" },
-            fontFamily: "Segoe UI",
+            fontFamily: "Arimo",
             display: "inline",
           }}
         >
@@ -69,8 +70,9 @@ export default function Main({ maxMobile, changeActivePage }) {
           <Typography
             component="span"
             sx={{
-              fontFamily: "Arimo",
               color: "#9E094A",
+              cursor: "pointer",
+              ml: "7px"
             }}
           >
             Зарегистрироваться
