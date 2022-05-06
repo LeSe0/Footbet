@@ -1,14 +1,22 @@
 // React
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { menuData } from "../../routes";
 // MUI
-import { Grid, Hidden, Modal } from "@mui/material";
+import { Grid, Hidden } from "@mui/material";
 import ElemsRows from "./components/ElemsRows";
 import WebSitesForMobile from "../HeaderComponents/headerWebSitesComponents/mobile/WebSitesForMobile";
+import { useLocation } from "react-router-dom";
 
 export default function Menu() {
+
+  const location = useLocation()
+
   const [activeId, setActiveId] = useState(0);
-  const [openModal , setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+
+  useEffect(() => {
+    location.pathname == "/register" && setActiveId(undefined)
+  }, [location.pathname])
 
   return (
     <Hidden mdDown>
@@ -16,8 +24,8 @@ export default function Menu() {
         container
         sx={{
           pt: "44.6px",
-          fontSize : "16px",
-          justifyContent : "center"
+          fontSize: "16px",
+          justifyContent: "center"
         }}
       >
         <Grid item>
@@ -25,7 +33,7 @@ export default function Menu() {
             menuData={menuData}
             activeId={activeId}
             setActiveId={setActiveId}
-            setOpenModal = {setOpenModal}
+            setOpenModal={setOpenModal}
           />
         </Grid>
       </Grid>
