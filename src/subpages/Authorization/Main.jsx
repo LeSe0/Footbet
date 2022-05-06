@@ -1,6 +1,7 @@
 // React
 import React, { useState } from "react";
 import Joi from "joi";
+import { Link } from "react-router-dom";
 // components
 import { Stack, Typography } from "@mui/material";
 import LoginButtonComponent from "../../components/LoginComponents/LoginButtonComponent";
@@ -8,7 +9,7 @@ import LoginContentPart from "../../components/LoginComponents/LoginContentPart"
 import LoginHeadPart from "../../components/LoginComponents/LoginHeadPart";
 import LoginTitleComponent from "../../components/LoginComponents/LoginTitleComponent";
 
-export default function Main({ maxMobile, changeActivePage }) {
+export default function Main({ maxMobile, changeActivePage, closeModal }) {
   const [validateInputs, validation] = useState({
     value: {
       email: "",
@@ -64,19 +65,25 @@ export default function Main({ maxMobile, changeActivePage }) {
             fontSize: { xs: "13px", sm: "14px", lg: "15px" },
             fontFamily: "Arimo",
             display: "inline",
+            '& a': {
+              textDecoration: "none"
+            }
           }}
         >
           или
-          <Typography
-            component="span"
-            sx={{
-              color: "#9E094A",
-              cursor: "pointer",
-              ml: "7px"
-            }}
-          >
-            Зарегистрироваться
-          </Typography>
+          <Link to="register" onClick={closeModal}>
+            <Typography
+              component="span"
+              sx={{
+                color: "#9E094A",
+                cursor: "pointer",
+                ml: "7px",
+                textDecoration: "none"
+              }}
+            >
+              Зарегистрироваться
+            </Typography>
+          </Link>
         </Typography>
       </Stack>
     </form>

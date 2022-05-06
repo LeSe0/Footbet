@@ -14,7 +14,7 @@ export default function Login({ toggleModal, closeModal }) {
   const [activePage, changeActivePage] = useState(0);
 
   const page = [
-    <Main maxMobile={maxMobile} changeActivePage={changeActivePage} />,
+    <Main maxMobile={maxMobile} changeActivePage={changeActivePage} closeModal={closeModal} />,
     <ForgotPassword changeActivePage={changeActivePage} maxMobile={maxMobile} />,
     <Authenticate changeActivePage={changeActivePage} />,
     <CreateNewPassword changeActivePage={changeActivePage} />,

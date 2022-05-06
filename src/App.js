@@ -1,38 +1,28 @@
 // React
-import { Box } from "@mui/material";
 import React from "react";
-// routes
 import { routes } from "./routes";
-// Router DOM
 import { Route, Routes, useLocation } from "react-router-dom";
 // style
 import "./style.css";
 // components
 import Header from "./components/ConstantComponents/Header";
 import Footer from "./components/Footer/Footer";
+import { Box } from "@mui/material";
 
 function App() {
   let location = useLocation();
-  const validateLayout =
-    location.pathname != "/login" && location.pathname != "/register";
+  const validateLayoutHeader = location.pathname != "/login";
+  const validateLayoutFooter = location.pathname != "/login" && location.pathname != "/register";
 
   return (
     <Box className="app">
-      {validateLayout && <Header  />}
+      {validateLayoutHeader && <Header />}
       <Routes>
         {routes.map((el, i) => {
-          return (
-            <Route
-              path={el.path}
-              key={"routePage" + i}
-              element={
-                <el.component />
-              }
-            />
-          );
+          return <Route path={el.path} key={"routePage" + i} element={<el.component />} />;
         })}
       </Routes>
-      {validateLayout && <Footer />}
+      {validateLayoutFooter && <Footer />}
     </Box>
   );
 }

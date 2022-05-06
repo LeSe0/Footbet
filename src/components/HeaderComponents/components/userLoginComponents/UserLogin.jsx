@@ -7,6 +7,7 @@ import loginIcon from "../../../../images/Header/LoginIcon.svg";
 import { Grid, Typography, Box } from "@mui/material";
 import LanguageSelect from "./LanguageSelect";
 import Login from "../../../../pages/Login";
+import { Link } from "react-router-dom";
 
 export default function UserLogin() {
 
@@ -14,7 +15,7 @@ export default function UserLogin() {
 
   return (
     <Grid
-      item
+      container
       sx={(theme) => ({
         display: "flex",
         mt: "3.7994143484626646vw",
@@ -29,26 +30,31 @@ export default function UserLogin() {
           height: "min-content",
           display: "flex",
           alignItems: "center",
+          '& a': {
+            textDecoration: "none"
+          }
         }}
       >
         <img src={registerIcon} width="15vw" />
-        <Typography
-          sx={(theme) => ({
-            ml: "5px",
-            color: "#fff",
-            fontFamily: "Arimo",
-            fontWeight: "400",
-            fontSize: "1em",
-            [theme.breakpoints.down("lg")]: {
-              fontSize: "0.5em !important",
-            },
-            [theme.breakpoints.down("md")]: {
-              fontSize: "0.4em !important",
-            },
-          })}
-        >
-          Регистрация
-        </Typography>
+        <Link to="register">
+          <Typography
+            sx={(theme) => ({
+              ml: "5px",
+              color: "#fff",
+              fontFamily: "Arimo",
+              fontWeight: "400",
+              fontSize: "1em",
+              [theme.breakpoints.down("lg")]: {
+                fontSize: "0.5em !important",
+              },
+              [theme.breakpoints.down("md")]: {
+                fontSize: "0.4em !important",
+              },
+            })}
+          >
+            Регистрация
+          </Typography>
+        </Link>
       </Box>
       <Box
         sx={{
