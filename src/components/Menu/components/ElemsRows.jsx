@@ -12,6 +12,7 @@ const ElemsRows = memo(({
   setActiveId,
   setOpenModal
 }) => {
+
   return (
     <Box
       sx={{
@@ -28,15 +29,13 @@ const ElemsRows = memo(({
       {menuData.map((el, i) => {
         return (
           <Link key={el.title + i} to={el.path}>
-            <Box onClick={() => {
-              el.path == "contacts" && setOpenModal(true)
-            }}>
-
+            <Box>
               <Button
                 el={el}
                 id={i}
                 activeId={activeId}
                 setActiveId={setActiveId}
+                setOpenModal = {setOpenModal}
               />
             </Box>
           </Link>

@@ -1,6 +1,7 @@
 // components
 import Main from "./pages/Main";
 import Register from "./pages/Register";
+import Games from "./pages/Games";
 // images
 import Facebook from "./images/Header/Websites/facebook.svg";
 import Instagram from "./images/Header/Websites/Instagram.svg";
@@ -24,8 +25,8 @@ export const routes = [
     component: Login
   },
   {
-    title: "Игры",
-    component: Main
+    path: "/games",
+    component: Games
   },
   {
     title: "Статистика матчей",
@@ -56,27 +57,27 @@ export const menuData = [
   },
   {
     title: "Игры",
-    path: "games"
+    path: "/games"
   },
   {
     title: "Статистика матчей",
-    path: "forecasts"
+    path: "/forecasts"
   },
   {
     title: "Прогнозы/Оплата",
-    path: "forecasts"
+    path: "/forecasts"
   },
   {
     title: "Отзывы",
-    path: "reviews"
+    path: "/reviews"
   },
   {
     title: "О нас",
-    path: "aboutus"
+    path: "/aboutus"
   },
   {
     title: "Контакты",
-    path: "contacts"
+    path: false
   }
 ];
 

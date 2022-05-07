@@ -17,9 +17,9 @@ export default function HeaderContent({ toggleModal }) {
       item
       container
       sx={{
-        backgroundImage: location.pathname == "/register" ? '' : `url(${headerBackground})`,
+        backgroundImage: location.pathname != "/" ? '' : `url(${headerBackground})`,
         position: "relative",
-        backgroundColor: location.pathname == "/register" ? "" : "rgb(16, 16, 39)",
+        backgroundColor: location.pathname != "/" ? "" : "rgb(16, 16, 39)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         display: "flex",

@@ -23,7 +23,7 @@ const Header = memo(({ toggleModal }) => {
     >
       <Hidden mdDown>
         <Grid item>
-          {location.pathname != "/register" && <HeaderWebSites />}
+          {location.pathname == "/" && <HeaderWebSites />}
         </Grid>
       </Hidden>
       <HeaderContent toggleModal={toggleModal} />

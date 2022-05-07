@@ -22,7 +22,7 @@ export default function FootballerPart({ toggleModal }) {
         },
       })}
     >
-      {location.pathname != "/register" &&
+      {location.pathname == "/" &&
         <Grid
           item
           sx={(theme) => ({
@@ -47,7 +47,7 @@ export default function FootballerPart({ toggleModal }) {
           justifyContent: "flex-end",
           width: "100%",
           height: "100%",
-          alignItems: location.pathname != "/register" ? "flex-start" : "center",
+          alignItems: location.pathname == "/" ? "flex-start" : "center",
           [theme.breakpoints.down("md")]: {
             order: "0",
           },
