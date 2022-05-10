@@ -283,3 +283,30 @@ export const loginHeaderData = [
     path: "https://www.twitter.com",
   },
 ];
+
+export const gamesBetData = [
+  {
+    price : "1500 руб",
+    title : "Беспроигрышная стратегия"
+  },
+  {
+    price : "2500 руб",
+    title : "Беспроигрышная стратегия"
+  },
+  {
+    price : "3500 руб",
+    title : "Беспроигрышная стратегия"
+  },
+  {
+    price : "4500 руб",
+    title : "Беспроигрышная стратегия"
+  },
+  {
+    price : "1800 руб",
+    title : "Беспроигрышная стратегия"
+  },
+  {
+    price : "3800 руб",
+    title : "Беспроигрышная стратегия"
+  }
+]
