@@ -10,4 +10,6 @@
 body {
   background: #12112c;
   scroll-behavior: smooth;
+  position: relative;
+  min-height: 100vh;
 }
