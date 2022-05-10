@@ -1,7 +1,7 @@
 // components
 import Main from "./pages/Main";
 import Register from "./pages/Register";
-import Games from "./pages/Games";
+import GamesPage from "./pages/Games";
 // images
 import Facebook from "./images/Header/Websites/facebook.svg";
 import Instagram from "./images/Header/Websites/Instagram.svg";
@@ -26,7 +26,7 @@ export const routes = [
   },
   {
     path: "/games",
-    component: Games
+    component: GamesPage
   },
   {
     title: "Статистика матчей",

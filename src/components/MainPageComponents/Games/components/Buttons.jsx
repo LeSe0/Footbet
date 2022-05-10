@@ -2,7 +2,7 @@
 import React, { memo } from "react";
 // components
 import { Box } from "@mui/material";
-import Button from "../../../../helpers/Button";
+import GamesButton from "../../../../helpers/GamesButton";
 
 const buttonsData = [
   {
@@ -24,7 +24,7 @@ const Buttons = memo(({ activeId, setActiveId }) => {
     >
       {buttonsData.map((el, i) => {
         return (
-          <Button
+          <GamesButton
             id={i}
             activeId={activeId}
             setActiveId={setActiveId}
