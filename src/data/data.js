@@ -286,27 +286,123 @@ export const loginHeaderData = [
 
 export const gamesBetData = [
   {
+    homeCommand : AtleticoMadrid,
+    homeCommandName : "Атлетико",
+    guestCommandName : "Ренн",
+    guestCommand : Renn,
+    coefficient : 1.67,
+    time : "22:30",
     price : "1500 руб",
-    title : "Беспроигрышная стратегия"
+    type : "Ординар",
+    date : "17.01",
+    forecast : "тб 1,5 / коеф 3,5"
   },
   {
-    price : "2500 руб",
-    title : "Беспроигрышная стратегия"
+    homeCommand : AtleticoMadrid,
+    homeCommandName : "Атлетико",
+    guestCommandName : "Ренн",
+    guestCommand : Renn,
+    coefficient : 1.67,
+    time : "22:30",
+    price : "1500 руб",
+    type : "Ординар",
+    date : "17.01",
+    forecast : "тб 1,5 / коеф 3,5"
   },
   {
-    price : "3500 руб",
-    title : "Беспроигрышная стратегия"
+    homeCommand : AtleticoMadrid,
+    homeCommandName : "Атлетико",
+    guestCommandName : "Ренн",
+    guestCommand : Renn,
+    coefficient : 1.67,
+    time : "22:30",
+    price : "1500 руб",
+    type : "Ординар",
+    date : "17.01",
+    forecast : "тб 1,5 / коеф 3,5"
   },
   {
-    price : "4500 руб",
-    title : "Беспроигрышная стратегия"
+    homeCommand : AtleticoMadrid,
+    homeCommandName : "Атлетико",
+    guestCommandName : "Ренн",
+    guestCommand : Renn,
+    coefficient : 1.67,
+    time : "22:30",
+    price : "1500 руб",
+    type : "Ординар",
+    date : "17.01",
+    forecast : "тб 1,5 / коеф 3,5"
   },
   {
-    price : "1800 руб",
-    title : "Беспроигрышная стратегия"
+    homeCommand : AtleticoMadrid,
+    homeCommandName : "Атлетико",
+    guestCommandName : "Ренн",
+    guestCommand : Renn,
+    coefficient : 1.67,
+    time : "22:30",
+    price : "1500 руб",
+    type : "Ординар",
+    date : "17.01",
+    forecast : "тб 1,5 / коеф 3,5"
   },
   {
-    price : "3800 руб",
-    title : "Беспроигрышная стратегия"
+    homeCommand : AtleticoMadrid,
+    homeCommandName : "Атлетико",
+    guestCommandName : "Ренн",
+    guestCommand : Renn,
+    coefficient : 1.67,
+    time : "22:30",
+    price : "1500 руб",
+    type : "Ординар",
+    date : "17.01",
+    forecast : "тб 1,5 / коеф 3,5"
+  },
+  {
+    homeCommand : AtleticoMadrid,
+    homeCommandName : "Атлетико",
+    guestCommandName : "Ренн",
+    guestCommand : Renn,
+    coefficient : 1.67,
+    time : "22:30",
+    price : "1500 руб",
+    type : "Ординар",
+    date : "17.01",
+    forecast : "тб 1,5 / коеф 3,5"
+  },
+  {
+    homeCommand : AtleticoMadrid,
+    homeCommandName : "Атлетико",
+    guestCommandName : "Ренн",
+    guestCommand : Renn,
+    coefficient : 1.67,
+    time : "22:30",
+    price : "1500 руб",
+    type : "Ординар",
+    date : "17.01",
+    forecast : "тб 1,5 / коеф 3,5"
+  },
+  {
+    homeCommand : AtleticoMadrid,
+    homeCommandName : "Атлетико",
+    guestCommandName : "Ренн",
+    guestCommand : Renn,
+    coefficient : 1.67,
+    time : "22:30",
+    price : "1500 руб",
+    type : "Ординар",
+    date : "17.01",
+    forecast : "тб 1,5 / коеф 3,5"
+  },
+  {
+    homeCommand : AtleticoMadrid,
+    homeCommandName : "Атлетико",
+    guestCommandName : "Ренн",
+    guestCommand : Renn,
+    coefficient : 1.67,
+    time : "22:30",
+    price : "1500 руб",
+    type : "Ординар",
+    date : "17.01",
+    forecast : "тб 1,5 / коеф 3,5"
   }
 ]

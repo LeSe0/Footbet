@@ -10,6 +10,7 @@ import Telegram from "./images/Header/Websites/telegram.svg";
 import Viber from "./images/Header/Websites/Viber.svg";
 import WhatsUp from "./images/Header/Websites/WhatsUp.svg";
 import Login from "./pages/Login";
+import Forecasts from "./pages/Forecasts";
 
 export const routes = [
   {
@@ -33,8 +34,8 @@ export const routes = [
     component: Main
   },
   {
-    title: "Прогнозы/Оплата",
-    component: Main
+    path: "/forecasts",
+    component: Forecasts
   },
   {
     title: "Отзывы",
@@ -61,7 +62,7 @@ export const menuData = [
   },
   {
     title: "Статистика матчей",
-    path: "/forecasts"
+    path: "/statistic"
   },
   {
     title: "Прогнозы/Оплата",
