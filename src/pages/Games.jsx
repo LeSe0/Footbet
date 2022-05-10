@@ -7,7 +7,7 @@ import Games from "../components/MainPageComponents/Games/Games";
 
 export default function GamesPage() {
   return (
-    <Stack alignItems="center">
+    <Stack alignItems="center" mb = "100px">
       <Menu />
       <Games />
     </Stack>
