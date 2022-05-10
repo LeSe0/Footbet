@@ -1,6 +1,5 @@
 // React
 import React, { memo } from "react";
-
 // components
 import { Box } from "@mui/material";
 import Button from "../../../helpers/Button";

@@ -2,14 +2,18 @@
 import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import { useLocation } from "react-router-dom";
 
-export default function Button({ el, id, activeId, setActiveId, setOpenModal}) {
+export default function Button({ el, id, setOpenModal}) {
+  
+  const location = useLocation();
+
   return (
     <Grid
       item
       sx={theme => ({
         background:
-          activeId == id
+        el.path == location.pathname
             ? "linear-gradient(80.04deg, #D10A52 1.6%, rgba(5, 5, 11, 0) 106.17%)"
             : "linear-gradient(80.04deg, #040749 1.6%, rgba(44, 44, 44, 0) 106.17%)",
         color: "#fff",
@@ -47,13 +51,13 @@ export default function Button({ el, id, activeId, setActiveId, setOpenModal}) {
           height: "5vh",
           display: "flex",
           alignItems: "center",
-          borderLeft: `2px solid ${activeId == id ? "#12112C" : "#D10A52"}`,
+          borderLeft: `2px solid ${el.path == location.pathname ? "#12112C" : "#D10A52"}`,
           width: "90%",
           justifyContent: "center",
           cursor: "pointer"
         }}
         onClick={() => {
-          el.path ? setActiveId(id) : setOpenModal(true)
+          !el.path && setOpenModal(true)
         }}
       >
         <Typography
