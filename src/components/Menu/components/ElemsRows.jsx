@@ -27,20 +27,19 @@ const ElemsRows = memo(({
     >
       {menuData.map((el, i) => {
         return (
-          <Link key={el.title + i} to={el.path}>
-            <Box>
+          <Box>
+            <Link key={el.title + i} to={el.path}>
               <Button
                 el={el}
                 id={i}
                 activeId={activeId}
                 setActiveId={setActiveId}
-                setOpenModal = {setOpenModal}
+                setOpenModal={setOpenModal}
               />
-            </Box>
-          </Link>
-        );
+            </Link>
+          </Box>);
       })}
-    </Box>
+    </Box >
   );
 })
 

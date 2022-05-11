@@ -17,7 +17,7 @@ export const gamesData = [
     guestComandIcon: AtleticBilbao,
     score: "2 : 1",
     startTime: "20:00",
-    started: "начался",
+    started: "начался"
   },
   {
     league: "Испания",
@@ -27,7 +27,7 @@ export const gamesData = [
     guestCommandIcon: Renn,
     score: "-",
     startTime: "23:00",
-    started: "не начался",
+    started: "не начался"
   },
   {
     league: "Испания",
@@ -37,7 +37,7 @@ export const gamesData = [
     guestCommandIcon: Renn,
     score: "-",
     startTime: "15:00",
-    started: "не начался",
+    started: "не начался"
   },
   {
     league: "Испания",
@@ -47,7 +47,7 @@ export const gamesData = [
     guestCommandIcon: Renn,
     score: "-",
     startTime: "16:00",
-    started: "не начался",
+    started: "не начался"
   },
   {
     league: "Франция",
@@ -57,7 +57,7 @@ export const gamesData = [
     guestCommandIcon: Renn,
     score: "2 : 1",
     startTime: "20:00",
-    started: "начался",
+    started: "начался"
   },
   {
     league: "Италия",
@@ -67,7 +67,7 @@ export const gamesData = [
     guestCommandIcon: Renn,
     score: "-",
     startTime: "23:00",
-    started: "не начался",
+    started: "не начался"
   },
   {
     league: "Англия",
@@ -77,7 +77,7 @@ export const gamesData = [
     guestCommandIcon: Renn,
     score: "2 : 1",
     startTime: "15:00",
-    started: "начался",
+    started: "начался"
   },
   {
     league: "Германия",
@@ -87,8 +87,8 @@ export const gamesData = [
     guestComandIcon: Renn,
     score: "-",
     startTime: "16:00",
-    started: "не начался",
-  },
+    started: "не начался"
+  }
 ];
 
 export const comments = [
@@ -99,7 +99,7 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
+    date: "10.02.2022"
   },
   {
     authorImg: false,
@@ -108,7 +108,7 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
+    date: "10.02.2022"
   },
   {
     authorImg: false,
@@ -117,7 +117,7 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
+    date: "10.02.2022"
   },
   {
     authorImg: false,
@@ -126,7 +126,7 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
+    date: "10.02.2022"
   },
   {
     authorImg: false,
@@ -135,7 +135,7 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
+    date: "10.02.2022"
   },
   {
     authorImg: false,
@@ -144,7 +144,7 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
+    date: "10.02.2022"
   },
   {
     authorImg: false,
@@ -153,7 +153,7 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
+    date: "10.02.2022"
   },
   {
     authorImg: false,
@@ -162,7 +162,7 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
+    date: "10.02.2022"
   },
   {
     authorImg: false,
@@ -171,7 +171,7 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
+    date: "10.02.2022"
   },
   {
     authorImg: false,
@@ -180,7 +180,7 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
+    date: "10.02.2022"
   },
   {
     authorImg: false,
@@ -189,7 +189,7 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
+    date: "10.02.2022"
   },
   {
     authorImg: false,
@@ -198,7 +198,7 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
+    date: "10.02.2022"
   },
   {
     authorImg: false,
@@ -207,8 +207,8 @@ export const comments = [
     ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation lamco laboris nisi ut 
     aliquip ex ea commodo consequat.`,
     authorName: "Lorem Ipsum",
-    date: "10.02.2022",
-  },
+    date: "10.02.2022"
+  }
 ];
 
 export const footerRouteData = [
@@ -216,193 +216,229 @@ export const footerRouteData = [
     {
       path: "/",
       hashLink: "forecastsHash",
-      title: "Прогнозы",
+      title: "Прогнозы"
     },
     {
       path: "/",
       hashLink: "gamesHash",
-      title: "Игры",
+      title: "Игры"
     },
     {
       path: "/",
       hashLink: "newsHash",
-      title: "Новости",
-    },
+      title: "Новости"
+    }
   ],
   [
     {
       path: "/aboutus",
       hashLink: "",
-      title: "О нас",
+      title: "О нас"
     },
     {
       path: "/",
       hashLink: "",
-      title: "Оплата",
+      title: "Оплата"
     },
     {
       path: "/",
       hashLink: "",
-      title: "Статистика матчей",
-    },
+      title: "Статистика матчей"
+    }
   ],
   [
     {
       path: "/register",
       hashLink: "",
-      title: "Регистрация",
+      title: "Регистрация"
     },
     {
       path: "/rewievs",
       hashLink: "",
-      title: "Отзывы",
+      title: "Отзывы"
     },
     {
       path: "/contacts",
       hashLink: "",
-      title: "Контакты",
-    },
-  ],
+      title: "Контакты"
+    }
+  ]
 ];
 
 export const loginHeaderData = [
   {
     icon: Facebook,
-    path: "https://www.facebook.com",
+    path: "https://www.facebook.com"
   },
   {
     icon: gmail,
-    path: "https://www.gmail.com",
+    path: "https://www.gmail.com"
   },
   {
     icon: Vkontakte,
-    path: "https://www.vkontakte.com",
+    path: "https://www.vkontakte.com"
   },
   {
     icon: Twitter,
-    path: "https://www.twitter.com",
-  },
+    path: "https://www.twitter.com"
+  }
 ];
 
 export const gamesBetData = [
   {
-    homeCommand : AtleticoMadrid,
-    homeCommandName : "Атлетико",
-    guestCommandName : "Ренн",
-    guestCommand : Renn,
-    coefficient : 1.67,
-    time : "22:30",
-    price : "1500 руб",
-    type : "Ординар",
-    date : "17.01",
-    forecast : "тб 1,5 / коеф 3,5"
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    coefficient: 1.67,
+    time: "22:30",
+    price: "1500 руб",
+    type: "Ординар",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5"
   },
   {
-    homeCommand : AtleticoMadrid,
-    homeCommandName : "Атлетико",
-    guestCommandName : "Ренн",
-    guestCommand : Renn,
-    coefficient : 1.67,
-    time : "22:30",
-    price : "1500 руб",
-    type : "Ординар",
-    date : "17.01",
-    forecast : "тб 1,5 / коеф 3,5"
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    coefficient: 1.67,
+    time: "22:30",
+    price: "1500 руб",
+    type: "Ординар",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5"
   },
   {
-    homeCommand : AtleticoMadrid,
-    homeCommandName : "Атлетико",
-    guestCommandName : "Ренн",
-    guestCommand : Renn,
-    coefficient : 1.67,
-    time : "22:30",
-    price : "1500 руб",
-    type : "Ординар",
-    date : "17.01",
-    forecast : "тб 1,5 / коеф 3,5"
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    coefficient: 1.67,
+    time: "22:30",
+    price: "1500 руб",
+    type: "Ординар",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5"
   },
   {
-    homeCommand : AtleticoMadrid,
-    homeCommandName : "Атлетико",
-    guestCommandName : "Ренн",
-    guestCommand : Renn,
-    coefficient : 1.67,
-    time : "22:30",
-    price : "1500 руб",
-    type : "Ординар",
-    date : "17.01",
-    forecast : "тб 1,5 / коеф 3,5"
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    coefficient: 1.67,
+    time: "22:30",
+    price: "1500 руб",
+    type: "Ординар",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5"
   },
   {
-    homeCommand : AtleticoMadrid,
-    homeCommandName : "Атлетико",
-    guestCommandName : "Ренн",
-    guestCommand : Renn,
-    coefficient : 1.67,
-    time : "22:30",
-    price : "1500 руб",
-    type : "Ординар",
-    date : "17.01",
-    forecast : "тб 1,5 / коеф 3,5"
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    coefficient: 1.67,
+    time: "22:30",
+    price: "1500 руб",
+    type: "Ординар",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5"
   },
   {
-    homeCommand : AtleticoMadrid,
-    homeCommandName : "Атлетико",
-    guestCommandName : "Ренн",
-    guestCommand : Renn,
-    coefficient : 1.67,
-    time : "22:30",
-    price : "1500 руб",
-    type : "Ординар",
-    date : "17.01",
-    forecast : "тб 1,5 / коеф 3,5"
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    coefficient: 1.67,
+    time: "22:30",
+    price: "1500 руб",
+    type: "Ординар",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5"
   },
   {
-    homeCommand : AtleticoMadrid,
-    homeCommandName : "Атлетико",
-    guestCommandName : "Ренн",
-    guestCommand : Renn,
-    coefficient : 1.67,
-    time : "22:30",
-    price : "1500 руб",
-    type : "Ординар",
-    date : "17.01",
-    forecast : "тб 1,5 / коеф 3,5"
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    coefficient: 1.67,
+    time: "22:30",
+    price: "1500 руб",
+    type: "Ординар",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5"
   },
   {
-    homeCommand : AtleticoMadrid,
-    homeCommandName : "Атлетико",
-    guestCommandName : "Ренн",
-    guestCommand : Renn,
-    coefficient : 1.67,
-    time : "22:30",
-    price : "1500 руб",
-    type : "Ординар",
-    date : "17.01",
-    forecast : "тб 1,5 / коеф 3,5"
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    coefficient: 1.67,
+    time: "22:30",
+    price: "1500 руб",
+    type: "Ординар",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5"
   },
   {
-    homeCommand : AtleticoMadrid,
-    homeCommandName : "Атлетико",
-    guestCommandName : "Ренн",
-    guestCommand : Renn,
-    coefficient : 1.67,
-    time : "22:30",
-    price : "1500 руб",
-    type : "Ординар",
-    date : "17.01",
-    forecast : "тб 1,5 / коеф 3,5"
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    coefficient: 1.67,
+    time: "22:30",
+    price: "1500 руб",
+    type: "Ординар",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5"
   },
   {
-    homeCommand : AtleticoMadrid,
-    homeCommandName : "Атлетико",
-    guestCommandName : "Ренн",
-    guestCommand : Renn,
-    coefficient : 1.67,
-    time : "22:30",
-    price : "1500 руб",
-    type : "Ординар",
-    date : "17.01",
-    forecast : "тб 1,5 / коеф 3,5"
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    coefficient: 1.67,
+    time: "22:30",
+    price: "1500 руб",
+    type: "Ординар",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    coefficient: 1.67,
+    time: "22:30",
+    price: "1500 руб",
+    type: "Ординар",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    coefficient: 1.67,
+    time: "22:30",
+    price: "1500 руб",
+    type: "Ординар",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5"
   }
-]
+];

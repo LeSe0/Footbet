@@ -4,8 +4,8 @@ import { useLocation } from "react-router-dom";
 // components
 import { Grid, Typography, Box } from "@mui/material";
 
-export default function Button({ el, id, setOpenModal}) {
-  
+export default function Button({ el, setOpenModal }) {
+
   const location = useLocation();
 
   return (
@@ -13,7 +13,7 @@ export default function Button({ el, id, setOpenModal}) {
       item
       sx={theme => ({
         background:
-        el.path == location.pathname
+          el.path == location.pathname
             ? "linear-gradient(80.04deg, #D10A52 1.6%, rgba(5, 5, 11, 0) 106.17%)"
             : "linear-gradient(80.04deg, #040749 1.6%, rgba(44, 44, 44, 0) 106.17%)",
         color: "#fff",
@@ -33,7 +33,7 @@ export default function Button({ el, id, setOpenModal}) {
             borderLeft: "2px solid #12112C"
           }
         },
-        [theme.breakpoints.down("1050")]: {
+        [theme.breakpoints.down("1070")]: {
           mb: "1%",
           maxWidth: "150px",
           minHeight: "51px",
@@ -54,7 +54,6 @@ export default function Button({ el, id, setOpenModal}) {
           borderLeft: `2px solid ${el.path == location.pathname ? "#12112C" : "#D10A52"}`,
           width: "90%",
           justifyContent: "center",
-          cursor: "pointer"
         }}
         onClick={() => {
           !el.path && setOpenModal(true)
@@ -63,7 +62,8 @@ export default function Button({ el, id, setOpenModal}) {
         <Typography
           sx={{
             ml: "5px",
-            fontFamily: "Arimo"
+            fontFamily: "Arimo",
+            cursor: "pointer"
           }}
         >
           {el.title}

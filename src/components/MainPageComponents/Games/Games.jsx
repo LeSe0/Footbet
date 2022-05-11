@@ -27,7 +27,7 @@ export default function Games() {
     >
       <Stack
         sx={{
-          width: "88vw",
+          width: { xs: "98%", sm: "88vw" },
           backgroundColor: "#0C0B22",
           height: "100%",
           alignItems: "center",
@@ -60,7 +60,7 @@ export default function Games() {
           alignItems: "flex-start",
           flexDirection: "column",
           textAlign: "left",
-          width: "88vw",
+          width: '88vw',
           color: "white",
           background: "#FFFFFF0A",
           pt: "30px",

@@ -12,13 +12,14 @@ export default function TableForDesktop() {
         maxHeight: "600px",
         maxWidth: "90%",
         mt: "40px",
-        mb: "150px"
+        mb: "150px",
+        overflowX: "hidden",
       }}
     >
       <Table
         stickyHeader
         sx={{
-          bgcolor: "#1B1A30"
+          bgcolor: "#1B1A30",
         }}
       >
         <TableHeadComponent />
