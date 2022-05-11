@@ -2,6 +2,7 @@
 import Main from "./pages/Main";
 import Register from "./pages/Register";
 import GamesPage from "./pages/Games";
+import Statistic from "./pages/Statistic";
 // images
 import Facebook from "./images/Header/Websites/facebook.svg";
 import Instagram from "./images/Header/Websites/Instagram.svg";
@@ -30,8 +31,8 @@ export const routes = [
     component: GamesPage
   },
   {
-    title: "Статистика матчей",
-    component: Main
+    path: "/statistic",
+    component: Statistic
   },
   {
     path: "/forecasts",

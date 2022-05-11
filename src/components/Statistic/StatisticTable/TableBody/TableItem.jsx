@@ -2,14 +2,13 @@
 import React from "react";
 // Components
 import { Grid, TableCell, Typography, useMediaQuery, TableRow } from "@mui/material";
-import BuyButton from "../../BuyButton";
 
 export default function TableItem({ el, i }) {
   const housandPx = useMediaQuery("(min-width:1000px)");
 
   return (
     <TableRow
-      key={"gamesBetTableRow" + i}
+      key={"statisticItemGamesRow" + i}
       sx={{
         bgcolor: "#FFFFFF17",
         "& td": {
@@ -112,21 +111,23 @@ export default function TableItem({ el, i }) {
         <Typography
           sx={{
             bgcolor: "#9E094A",
-            p: "5px"
+            p: "5px",
           }}
         >
           {el.forecast}
         </Typography>
       </TableCell>
-      <TableCell align="center">{el.type}</TableCell>
       <TableCell align="center">{el.date}</TableCell>
       <TableCell align="center">{el.time}</TableCell>
-      <TableCell align="center">{el.coefficient}</TableCell>
-      <TableCell align="left">{el.price}</TableCell>
+      <TableCell align='center'>{el.check}</TableCell>
       <TableCell sx={{
         pl: "0",
       }}>
-        <BuyButton />
+        <Typography sx={{
+          p: "10px",
+          bgcolor: el.decision == "Победа" ? "#0C7617" : el.decision == "Поражение" ? "#B10000" : "#B4AC00",
+          textAlign: "center"
+        }}>{el.decision}</Typography>
       </TableCell>
     </TableRow>
   );

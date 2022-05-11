@@ -2,7 +2,6 @@
 import React from 'react'
 // components
 import { Grid, Stack, Typography } from '@mui/material'
-import BuyButton from "../../BuyButton"
 
 export default function TableFooterComponent({ el }) {
     return (
@@ -12,7 +11,14 @@ export default function TableFooterComponent({ el }) {
                 textAlign: "center"
             }
         }}>
-            <BuyButton />
+            <Stack alignItems="center" justifyContent="center">
+                <Typography sx={{
+                    p: "10px",
+                    bgcolor: el.decision == "Победа" ? "#0C7617" : el.decision == "Поражение" ? "#B10000" : "#B4AC00",
+                    textAlign: "center",
+                    borderRadius: "4px"
+                }}>{el.decision}</Typography>
+            </Stack>
             <Stack sx={{
                 display: el.forecast ? "flex" : "none",
                 color: "white",
@@ -20,13 +26,6 @@ export default function TableFooterComponent({ el }) {
                 <Typography fontWeight="700">прогноз</Typography>
                 <Typography border="1px solid white" py="2px" borderRadius="4px" px="4px">{el.forecast}</Typography>
             </Stack>
-            <Stack sx={{
-                display: el.forecast ? "flex" : "none",
-                color: "white"
-            }}>
-                <Typography fontWeight="700">цена</Typography>
-                <Typography>{el.price}</Typography>
-            </Stack>
-        </Grid>
+        </Grid >
     )
 }

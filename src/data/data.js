@@ -442,3 +442,150 @@ export const gamesBetData = [
     forecast: "тб 1,5 / коеф 3,5"
   }
 ];
+
+export const gamesStatisticData = [
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    decision: "Поражение"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    decision: "Победа"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    decision: "Возврат"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    decision: "Поражение"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    decision: "Поражение"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    decision: "Победа"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    decision: "Возврат"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    decision: "Поражение"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    decision: "Поражение"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    decision: "Победа"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    decision: "Возврат"
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date: "17.01",
+    mobileDate: "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    decision: "Поражение"
+  }
+];

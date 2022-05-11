@@ -1,6 +1,6 @@
 // React
 import React from "react";
-import { gamesBetData } from "../../../data/data";
+import { gamesStatisticData } from "../../../data/data";
 // Components
 import { TableBody } from "@mui/material";
 import TableItem from "./TableBody/TableItem";
@@ -15,9 +15,9 @@ export default function TableBodyComponent() {
         }
       }}
     >
-      {gamesBetData.map((el, i) => {
+      {gamesStatisticData.map((el, i) => {
         return (
-          <TableItem el={el} i={i} key={"betItemGames" + i} />
+          <TableItem el={el} i={i} key={"StatisticItemGames" + i} />
         );
       })}
     </TableBody>
