@@ -13,6 +13,7 @@ import Viber from "./images/Header/Websites/Viber.svg";
 import WhatsUp from "./images/Header/Websites/WhatsUp.svg";
 import Login from "./pages/Login";
 import Forecasts from "./pages/Forecasts";
+import AboutUs from "./pages/AboutUs";
 
 export const routes = [
   {
@@ -44,12 +45,8 @@ export const routes = [
     component: Reviews
   },
   {
-    title: "О нас",
-    component: Main
-  },
-  {
-    title: "Контакты",
-    component: Main
+    path: "/aboutUs",
+    component: AboutUs
   }
 ];
 
