@@ -9,7 +9,7 @@ import { ArrowForward, ArrowBack } from "@mui/icons-material";
 import NewestComments from "./SortedComments/NewestComments";
 import MostRatedComments from "./SortedComments/MostRatedComments";
 
-export default function CommentsItems({ activeSortOption }) {
+export default function CommentsItems({ activeSortOption, path }) {
   const [page, setPage] = useState(1);
   const PER_PAGE = 3;
 
@@ -18,8 +18,8 @@ export default function CommentsItems({ activeSortOption }) {
     activeSortOption == 0
       ? comments
       : comments.sort((elem1, elem2) =>
-          elem1.rateValue > elem2.rateValue ? -1 : 1
-        ),
+        elem1.rateValue > elem2.rateValue ? -1 : 1
+      ),
     PER_PAGE
   );
 
@@ -29,8 +29,8 @@ export default function CommentsItems({ activeSortOption }) {
   };
 
   const renderComments = [
-    <NewestComments DATA={DATA} />,
-    <MostRatedComments DATA={DATA} />,
+    <NewestComments DATA={DATA} path={path} />,
+    <MostRatedComments DATA={DATA} path={path} />,
   ];
 
   return (

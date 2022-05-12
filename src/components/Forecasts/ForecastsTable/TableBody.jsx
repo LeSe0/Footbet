@@ -17,7 +17,7 @@ export default function TableBodyComponent() {
     >
       {gamesBetData.map((el, i) => {
         return (
-          <TableItem el={el} i={i} key={"betItemGames" + i} />
+          <TableItem el={el} i={i} key={"betItemGamesDesktop" + i} />
         );
       })}
     </TableBody>

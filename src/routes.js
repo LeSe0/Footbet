@@ -3,6 +3,7 @@ import Main from "./pages/Main";
 import Register from "./pages/Register";
 import GamesPage from "./pages/Games";
 import Statistic from "./pages/Statistic";
+import Reviews from "./pages/Reviews";
 // images
 import Facebook from "./images/Header/Websites/facebook.svg";
 import Instagram from "./images/Header/Websites/Instagram.svg";
@@ -39,8 +40,8 @@ export const routes = [
     component: Forecasts
   },
   {
-    title: "Отзывы",
-    component: Main
+    path: "/reviews",
+    component: Reviews
   },
   {
     title: "О нас",

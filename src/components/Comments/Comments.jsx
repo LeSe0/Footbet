@@ -8,7 +8,7 @@ import CommentsHeader from "./components/CommentsHeader";
 import CommentsItems from "./components/CommentsItems";
 import CommentsInput from "./components/CommentsInput";
 
-export default function Comments() {
+export default function Comments({ path }) {
   const [activeSortOption, changeSortOption] = useState(0);
   const [rateWebSite, changeRating] = useState(0);
 
@@ -36,7 +36,7 @@ export default function Comments() {
         activeSortOption={activeSortOption}
         changeSortOption={changeSortOption}
       />
-      <CommentsItems activeSortOption={activeSortOption} />
+      <CommentsItems activeSortOption={activeSortOption} path={path} />
       <CommentsInput
         rateWebSite={rateWebSite}
         changeRating={changeRating}

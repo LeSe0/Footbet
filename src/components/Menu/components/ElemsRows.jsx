@@ -27,7 +27,7 @@ const ElemsRows = memo(({
     >
       {menuData.map((el, i) => {
         return (
-          <Box>
+          <Box key={"menuItem" + i}>
             <Link key={el.title + i} to={el.path}>
               <Button
                 el={el}

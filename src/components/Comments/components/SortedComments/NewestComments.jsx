@@ -7,7 +7,7 @@ import CommentsItemHeader from "../CommentsItemsComponents/CommentsItemHeader";
 import CommentsItemRating from "../CommentsItemsComponents/CommentsItemRating";
 import CommentItemContent from "../CommentsItemsComponents/CommentItemContent";
 
-export default function NewestComments({ DATA }) {
+export default function NewestComments({ DATA, path }) {
   return (
     <Box>
       {DATA.currentData().map((item, i) => {
@@ -22,7 +22,7 @@ export default function NewestComments({ DATA }) {
                 mt: "11px",
               },
             })}
-            key={item.text + i}
+            key={path ? "reviewsPageCommentsItem" + i : item.text + i}
           >
             <CommentsItemHeader item={item} />
             <CommentsItemRating item={item} />
