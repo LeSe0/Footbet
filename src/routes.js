@@ -14,6 +14,7 @@ import WhatsUp from "./images/Header/Websites/WhatsUp.svg";
 import Login from "./pages/Login";
 import Forecasts from "./pages/Forecasts";
 import AboutUs from "./pages/AboutUs";
+import Cabinet from "./pages/Cabinet";
 
 export const routes = [
   {
@@ -47,6 +48,10 @@ export const routes = [
   {
     path: "/aboutUs",
     component: AboutUs
+  },
+  {
+    path: "/cabinet",
+    component: Cabinet
   }
 ];
 
