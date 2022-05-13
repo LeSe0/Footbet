@@ -33,7 +33,7 @@ export default function LoginInput({ fio, setFio, validateInputs }) {
             border: "none"
           },
           "& input": {
-            background: validateInputs?.error ? "rgba(158,9,74,.13)" : "rgba(255, 255, 255, 0.12)",
+            background: text.length > 0 ? "rgba(158,9,74,.13)" : "rgba(255, 255, 255, 0.12)",
             border: "1px solid white",
             color: "#FFFFFF66",
             fontFamily: "Arsenal",
