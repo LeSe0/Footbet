@@ -4,6 +4,7 @@ import React from 'react'
 import { Stack } from '@mui/material'
 import Menu from "../components/Menu/Menu";
 import Head from '../components/Purchase/Head/Head';
+import Content from '../components/Purchase/Content/Content';
 
 export default function BuyForecast() {
   return (
@@ -15,6 +16,7 @@ export default function BuyForecast() {
     }}>
         <Menu />
         <Head />
+        <Content />
     </Stack>
   )
 }

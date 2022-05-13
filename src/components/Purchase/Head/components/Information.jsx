@@ -1,6 +1,7 @@
 // React
-import { Stack, Typography } from "@mui/material";
 import React from "react";
+// Components
+import { Stack, Typography } from "@mui/material";
 
 export default function Information() {
   return (
