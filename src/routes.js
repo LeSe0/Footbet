@@ -15,6 +15,7 @@ import Login from "./pages/Login";
 import Forecasts from "./pages/Forecasts";
 import AboutUs from "./pages/AboutUs";
 import Cabinet from "./pages/Cabinet";
+import BuyForecast from "./pages/BuyForecast";
 
 export const routes = [
   {
@@ -52,6 +53,10 @@ export const routes = [
   {
     path: "/cabinet",
     component: Cabinet
+  },
+  {
+    path : "/purchase",
+    component : BuyForecast
   }
 ];
 
