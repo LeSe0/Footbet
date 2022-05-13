@@ -589,3 +589,139 @@ export const gamesStatisticData = [
     decision: "Поражение"
   }
 ];
+
+
+export const cabinetTableData = [
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date :  "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    price : "1500 руб."
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date :  "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    price : "1500 руб."
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date :  "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    price : "1500 руб."
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date :  "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    price : "1500 руб."
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date :  "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    price : "1500 руб."
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date :  "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    price : "1500 руб."
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date :  "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    price : "1500 руб."
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date :  "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    price : "1500 руб."
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date :  "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    price : "1500 руб."
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date :  "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    price : "1500 руб."
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date :  "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    price : "1500 руб."
+  },
+  {
+    homeCommand: AtleticoMadrid,
+    homeCommandName: "Атлетико",
+    guestCommandName: "Ренн",
+    guestCommand: Renn,
+    time: "22:30",
+    date :  "17.01.2022",
+    forecast: "тб 1,5 / коеф 3,5",
+    check: "2:0",
+    price : "1500 руб."
+  },
+]

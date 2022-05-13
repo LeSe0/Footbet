@@ -6,14 +6,14 @@ import { Grid, Typography } from '@mui/material'
 
 export default function InformationItems({ content, icon }) {
     return (
-        <Grid container justifyContent="space-between" sx={{
+        <Grid container justifyContent="space-between" flexWrap = "nowrap" sx={{
             "& p , span": {
                 fontSize: { xs: "10px", md: "12px", lg: "15px" },
                 color: "white"
             }
         }}>
             <Grid item>
-                <Grid container justifyContent="space-between" alignItems="center" sx={{
+                <Grid container justifyContent="space-between" alignItems="center" flexWrap = "nowrap" sx={{
                     "& img": {
                         p: "5px",
                         bgcolor: "#FFFFFB17",

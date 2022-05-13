@@ -6,14 +6,14 @@ import { Grid, Typography } from '@mui/material'
 
 export default function ChangePassword({ content, icon }) {
     return (
-        <Grid container justifyContent="space-between" sx={{
+        <Grid container flexWrap = "nowrap" justifyContent="space-between" sx={{
             "& p , span": {
                 fontSize: { xs: "8px", md: "10px", lg: "13px" },
                 color: "rgba(255, 255, 255, 0.4)"
             }
         }}>
             <Grid item width="70%">
-                <Grid container justifyContent="space-between" alignItems="center" sx={{
+                <Grid container justifyContent="space-between" flexWrap = "nowrap" alignItems="center" sx={{
                     "& img": {
                         p: "5px",
                         bgcolor: "#FFFFFB17",

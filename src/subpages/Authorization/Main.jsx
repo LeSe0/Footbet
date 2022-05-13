@@ -44,7 +44,10 @@ export default function Main({ maxMobile, changeActivePage, closeModal }) {
           alignItems: "center",
           justifyContent: maxMobile ? "flex-start" : "center",
           height: "100%",
-          width: "100%"
+          width: "100%",
+          '& a' : {
+            textDecoration : "none"
+          }
         }}
       >
         <LoginHeadPart />
@@ -57,7 +60,7 @@ export default function Main({ maxMobile, changeActivePage, closeModal }) {
           changePassword={changePassword}
           changeActivePage={changeActivePage}
         />
-        <LoginButtonComponent title="Войти" validateInputs={validateInputs} />
+        <LoginButtonComponent title="Войти" validateInputs={validateInputs} closeModal = {closeModal}/>
         <Typography
           component="span"
           sx={{

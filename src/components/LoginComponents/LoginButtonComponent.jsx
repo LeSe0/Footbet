@@ -3,8 +3,9 @@ import React, { memo } from "react";
 
 //components
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const LoginButtonComponent = memo(({ title, validateInputs }) => {
+const LoginButtonComponent = memo(({ title, validateInputs, closeModal }) => {
   return (
     <Button
       href={validateInputs ? "" : ""}
@@ -18,13 +19,20 @@ const LoginButtonComponent = memo(({ title, validateInputs }) => {
         mt: "40px",
         width: "80%",
         "&:hover": {
-          backgroundColor: "#9F0B45",
+          backgroundColor: "#9F0B45"
         },
+        "& a": {
+          color: "white",
+          width: "100%",
+          height: "100%"
+        }
       }}
     >
-      {title}
+      <Link to={validateInputs.error ? "" : "/cabinet"} onClick={() => (validateInputs.error ? "" : closeModal())}>
+        {title}
+      </Link>
     </Button>
   );
-})
+});
 
-export default LoginButtonComponent
+export default LoginButtonComponent;

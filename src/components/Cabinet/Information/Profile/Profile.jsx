@@ -10,7 +10,7 @@ export default function Profile() {
         <Box sx={{
             position: "relative",
             "& img": {
-                width: { xs: "200px", md: "350px" }
+                width: { xs: "200px", md: "250px" }
             }
         }}>
             <img src={ProfileImage} />
