@@ -3,12 +3,16 @@ import React from "react";
 // Components
 import { Box, TextField, Typography } from "@mui/material";
 
-export default function LoginInput({ fio, setFio, validateInputs }) {
+const onlyNumbers = e => {
+  e.target.value = e.target.value.replace(/[^0-9]/g, "");
+};
+
+export default function CvvInput({ cvv, setCvv, validateInputs }) {
   let text = "";
 
   for (let i = 0; i < validateInputs?.error?.details?.length; i++) {
-    if (validateInputs?.error?.details[i].context.key == "fio") {
-      text = "wrong fio";
+    if (validateInputs?.error?.details[i].context.key == "cvv") {
+      text = "wrong CVV code";
     }
   }
 
@@ -19,12 +23,14 @@ export default function LoginInput({ fio, setFio, validateInputs }) {
           shrink: "true"
         }}
         onChange={e => {
-          setFio(e.target.value);
+          onlyNumbers(e);
+          setCvv(e.target.value);
         }}
-        value={fio ? fio : ""}
+        value={cvv ? cvv : ""}
         type="text"
-        sx={theme => ({
-          width: "80%",
+        sx={{
+          width: "30%",
+          mt : "15px",
           "& .css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root": {
             border: "none",
             padding: "0",
@@ -39,25 +45,19 @@ export default function LoginInput({ fio, setFio, validateInputs }) {
             color: "#FFFFFF66",
             fontFamily: "Arsenal",
             fontWeight: "400px !important",
-            fontSize: "18px",
+            fontSize: "17px",
             overflow: "auto !important",
             borderRadius: "8px",
             width: "100%",
             height: "2.7%",
-            [theme.breakpoints.down("sm")]: {
-              fontSize: "16px",
-              pl: "10px"
-            },
-            [theme.breakpoints.between("sm", "lg")]: {
-              fontSize: "16px",
-              pl: "14px"
-            },
-            "&:placeholder": {
-              pl: "47px"
-            }
+            pl : {xs : "10px" , sm : "14px" , lg : "0"},
+            textAlign : "center"
           }
-        })}
-        placeholder="имя, фамилия"
+        }}
+        inputProps={{
+          maxLength: 3
+        }}
+        placeholder="код CVV"
       />
       <Typography
         sx={{
