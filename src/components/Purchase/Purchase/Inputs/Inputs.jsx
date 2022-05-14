@@ -1,5 +1,5 @@
 // React
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 // Components
 import { Button, Grid, Stack, Typography } from "@mui/material";
 import LoginInput from "./components/LoginInput";
@@ -7,12 +7,16 @@ import Joi from "joi";
 import BankCardInputContainer from "./BankCardInputContainer";
 import CvvInput from "./components/Cvv";
 import CardValidDate from "./components/CardValidDate";
+import DecisionModal from "../../Modal/DecisionModal";
 
 export default function Inputs() {
   const [fio, setFio] = useState("");
   const [cardNumber, setCardNumber] = useState("");
   const [cvv, setCvv] = useState("");
   const [cardValidDate, setValidDate] = useState("");
+  const [openModal, setModal] = useState(false);
+
+  const onClose = useCallback(() => setModal(false), [setModal]);
 
   const [validateInputs, validation] = useState({
     value: {
@@ -34,6 +38,7 @@ export default function Inputs() {
 
   const handleSubmit = e => {
     e.preventDefault();
+    validateInputs.error == undefined && setModal(true);
     validation(
       scheme.validate(
         {
@@ -61,14 +66,14 @@ export default function Inputs() {
         <BankCardInputContainer setCardNumber={setCardNumber} cardNumber={cardNumber} validateInputs={validateInputs} />
         <CvvInput cvv={cvv} validateInputs={validateInputs} setCvv={setCvv} />
         <CardValidDate validateInputs={validateInputs} cardValidDate={cardValidDate} setValidDate={setValidDate} />
-        <Grid container justifyContent = "center">
+        <Grid container justifyContent="center">
           <Button
             type="submit"
             sx={{
               bgcolor: "#A70B47",
               minWidth: "50px",
               maxWidth: "200px",
-              p : "10px",
+              p: "10px",
               color: "white",
               "&:hover": {
                 bgcolor: "#A70B47"
@@ -79,6 +84,7 @@ export default function Inputs() {
           </Button>
         </Grid>
       </Stack>
+      <DecisionModal open={openModal} onClose={onClose} />
     </form>
   );
 }
