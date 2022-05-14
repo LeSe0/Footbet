@@ -14,21 +14,21 @@ export default function Inputs() {
 
     const [validateInputs, validation] = useState({
         value: {
-            fio: "",
-            cardNumber: "",
+            fio: '',
+            cardNumber: '',
             cvv: "",
             cardValidDate: ""
         }
     });
 
     const scheme = Joi.object().keys({
-        fio: Joi.string().required(),
-        cardNumber: Joi.number().min(16).max(16).required(),
+        fio: Joi.string().min(5).required(),
+        cardNumber: Joi.string().regex(/^.{15,}$/).required(),
         cvv: Joi.number().min(3).max(3).required(),
         cardValidDate: Joi.date().min("1-1-2022").max("1-1-2028").required()
     });
 
-    const handleSubmit = useCallback(e => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         validation(
             scheme.validate(
@@ -41,7 +41,7 @@ export default function Inputs() {
                 { abortEarly: false }
             )
         );
-    }, []);
+    };
 
     return (
         <form onSubmit={handleSubmit}>
@@ -50,7 +50,7 @@ export default function Inputs() {
                 <Typography sx={{
                     fontSize: { xs: "10px", sm: "12px", md: "14px", lg: "15px" }
                 }}>номер карты</Typography>
-                <BankCardInputContainer setCardNumber={setCardNumber} cardNumber={cardNumber} />
+                <BankCardInputContainer setCardNumber={setCardNumber} cardNumber={cardNumber} validateInputs={validateInputs} />
                 <Button type="submit">asdasd</Button>
             </Stack>
         </form>

@@ -11,20 +11,20 @@ const inputChange = (ref, textFieldRef) => {
         textFieldRef.current.nextSibling.children[0].children[0].focus()
     }
     else if (ref?.current?.value?.length < 1 && textFieldRef.current.previousSibling != null) {
-        let prevInput = textFieldRef.current.previousSibling.children[0].children[0]
-        prevInput.focus()
-    }
-}
-
-const inputChangeForKD = (e, ref, textFieldRef) => {
-    if (e.code == 'Backspace' && e.target.value.length <= 1 && textFieldRef.current.previousSibling != null) {
         ref.current.value = ''
         let prevInput = textFieldRef.current.previousSibling.children[0].children[0]
         prevInput.focus()
     }
 }
 
-export default function BankCardInput({ validateInputs, handleOnChange, index, values }) {
+const inputChangeForKD = (e, ref, textFieldRef) => {
+    if (e.code == 'Backspace' && e.target.value.length < 1 && textFieldRef.current.previousSibling != null) {
+        let prevInput = textFieldRef.current.previousSibling.children[0].children[0]
+        prevInput.focus()
+    }
+}
+
+export default function BankCardInput({ handleOnChange, index, error }) {
 
     const ref = useRef(null);
     const textFieldRef = useRef(null)
@@ -58,7 +58,7 @@ export default function BankCardInput({ validateInputs, handleOnChange, index, v
                     border: "none"
                 },
                 "& input": {
-                    background: validateInputs?.error ? "rgba(158,9,74,.13)" : "rgba(255, 255, 255, 0.12)",
+                    background: error ? "rgba(158,9,74,.13)" : "rgba(255, 255, 255, 0.12)",
                     border: "1px solid white",
                     color: "#FFFFFF66",
                     fontFamily: "Arsenal",
